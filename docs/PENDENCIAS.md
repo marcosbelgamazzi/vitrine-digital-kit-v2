@@ -6,17 +6,21 @@ documentado até que a informação real seja fornecida.
 
 ## Assets de marca
 
-- **Logo (monograma VD)**: nenhum arquivo oficial (SVG/PNG) foi fornecido no
-  kit. Enquanto isso, usar placeholder textual/tipográfico discreto no Header
-  e Footer. Não redesenhar um logo definitivo em CSS. Substituir assim que os
-  arquivos oficiais forem entregues.
+- **Logo (monograma VD)**: identidade e conceito aprovados, mas nenhum
+  arquivo oficial (SVG/PNG) foi entregue ainda. Estrutura `/public/brand/`
+  criada (Fase 12) para receber os arquivos definitivos — ver
+  `public/brand/README.md` para a lista exata de arquivos esperados.
+  Enquanto isso, mantido o placeholder textual/tipográfico discreto no
+  Header e Footer (`src/components/ui/logo.tsx`). Não redesenhar um logo
+  definitivo em CSS. Substituir assim que os arquivos oficiais forem
+  entregues em `/public/brand/`.
 - **Favicon/manifest/ícones PWA**: o `favicon.ico` atual é o gerado pelo
   `create-next-app`. O `manifest.ts` (Fase 08) usa esse mesmo favicon como
-  ícone único — faltam versões 192x192 e 512x512 com a identidade oficial.
-  Substituir assim que os assets do logo forem entregues.
-- **Imagem Open Graph**: nenhuma imagem oficial (og:image) foi definida —
-  as páginas ficam sem preview de imagem ao compartilhar links até que um
-  asset seja fornecido.
+  ícone único — faltam `icon-192.png` e `icon-512.png` com a identidade
+  oficial (ver `public/brand/README.md`).
+- **Imagem Open Graph**: nenhuma imagem oficial (`og-image.png`) foi
+  definida — as páginas ficam sem preview de imagem ao compartilhar links
+  até que o asset seja entregue em `/public/brand/`.
 
 ## Conteúdo real
 
