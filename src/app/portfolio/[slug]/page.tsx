@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { notFound } from "next/navigation";
 import { Container } from "@/components/ui/container";
 import { PageHero } from "@/components/ui/page-hero";
@@ -49,6 +50,18 @@ export default async function CasePage({
 
       <section className="py-16 sm:py-20">
         <Container className="flex flex-col gap-12">
+          {item.cover && (
+            <div className="relative aspect-video overflow-hidden rounded-2xl border border-brand-navy/10">
+              <Image
+                src={item.cover}
+                alt={`Captura de tela do projeto ${item.name}`}
+                fill
+                className="object-cover object-top"
+                priority
+              />
+            </div>
+          )}
+
           <p className="max-w-3xl text-brand-navy/80">{item.description}</p>
 
           <div className="grid gap-10 sm:grid-cols-2">
@@ -104,6 +117,27 @@ export default async function CasePage({
             </div>
           )}
 
+          {item.gallery.length > 0 && (
+            <div className="flex flex-col gap-3">
+              <h2 className="font-semibold text-brand-navy">Galeria</h2>
+              <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                {item.gallery.map((image) => (
+                  <div
+                    key={image}
+                    className="relative aspect-video overflow-hidden rounded-xl border border-brand-navy/10"
+                  >
+                    <Image
+                      src={image}
+                      alt={`Tela do projeto ${item.name}`}
+                      fill
+                      className="object-cover object-top"
+                    />
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+
           {item.url && (
             <a
               href={item.url}
@@ -111,15 +145,16 @@ export default async function CasePage({
               rel="noopener noreferrer"
               className="text-sm font-medium text-brand-violet underline underline-offset-4"
             >
-              Visitar site
+              Visitar projeto
             </a>
           )}
         </Container>
       </section>
 
       <CtaBanner
-        title="Quer um resultado parecido para o seu negócio?"
-        description="Fale com a gente e vamos entender como aplicar essa estratégia no seu projeto."
+        title="Quer um projeto como este?"
+        description="Fale com a gente e vamos entender como aplicar essa estratégia no seu negócio."
+        buttonLabel="Quero um projeto como este"
         origin={`portfolio-${item.slug}`}
       />
     </>
