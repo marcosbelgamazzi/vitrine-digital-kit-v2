@@ -1,6 +1,8 @@
+import Image from "next/image";
 import Link from "next/link";
 import { Container } from "@/components/ui/container";
 import { PageHero } from "@/components/ui/page-hero";
+import { Button } from "@/components/ui/button";
 import { CtaBanner } from "@/components/ui/cta-banner";
 import { caseStudies } from "@/lib/portfolio";
 import { pageMetadata } from "@/lib/seo";
@@ -12,7 +14,24 @@ export const metadata = pageMetadata({
   path: "/portfolio",
 });
 
+/**
+ * Destaques curtos por case, derivados das funcionalidades reais em
+ * src/lib/portfolio.ts (sem inventar nada novo, só resumindo para exibição
+ * em selo/etiqueta). Casos sem entrada aqui caem no fallback (primeiras
+ * funcionalidades da lista completa).
+ */
+const highlightsBySlug: Record<string, string[]> = {
+  "festa-sao-sebastiao": [
+    "Checkout com PIX",
+    "Central do cliente",
+    "Painel administrativo",
+    "Cartelas de bingo",
+  ],
+};
+
 export default function PortfolioPage() {
+  const [featured, ...rest] = caseStudies;
+
   return (
     <>
       <ViewTracker event="portfolio_view" eventParams={{ page: "list" }} />
@@ -22,11 +41,59 @@ export default function PortfolioPage() {
         description="Cases desenvolvidos com estratégia, design e tecnologia."
       />
 
-      <section className="py-16 sm:py-20">
-        <Container>
-          {caseStudies.length > 0 ? (
+      <section className="pb-8 pt-16 sm:pb-10 sm:pt-20">
+        <Container className="flex flex-col gap-10">
+          {featured ? (
+            <div className="grid overflow-hidden rounded-2xl border border-brand-navy/10 lg:grid-cols-2">
+              <div className="relative aspect-video lg:aspect-auto">
+                <Image
+                  src={featured.cover}
+                  alt={`Captura de tela do projeto ${featured.name}`}
+                  fill
+                  className="object-cover object-top"
+                  priority
+                />
+              </div>
+              <div className="flex flex-col justify-center gap-4 p-6 sm:p-10">
+                <span className="text-xs font-semibold uppercase tracking-wide text-brand-violet">
+                  {featured.category}
+                </span>
+                <h2 className="text-2xl font-semibold text-brand-navy">{featured.name}</h2>
+                <p className="text-brand-navy/70">{featured.summary}</p>
+
+                <ul className="flex flex-wrap gap-2">
+                  {(highlightsBySlug[featured.slug] ?? featured.features.slice(0, 4)).map(
+                    (highlight) => (
+                      <li
+                        key={highlight}
+                        className="rounded-full border border-brand-navy/10 bg-brand-white px-3 py-1 text-xs font-medium text-brand-navy/80"
+                      >
+                        {highlight}
+                      </li>
+                    ),
+                  )}
+                </ul>
+
+                <div className="flex flex-col gap-3 sm:flex-row">
+                  <Button href={`/portfolio/${featured.slug}`}>Ver case completo</Button>
+                  {featured.url && (
+                    <Button href={featured.url} variant="secondary" target="_blank" rel="noopener noreferrer">
+                      Visitar projeto
+                    </Button>
+                  )}
+                </div>
+              </div>
+            </div>
+          ) : (
+            <div className="rounded-2xl border border-dashed border-brand-navy/20 p-10 text-center text-brand-navy/70">
+              Nossos primeiros cases estão em produção. Fale com a gente para
+              saber como o seu projeto pode ser o próximo aqui.
+            </div>
+          )}
+
+          {rest.length > 0 && (
             <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-              {caseStudies.map((item) => (
+              {rest.map((item) => (
                 <Link
                   key={item.slug}
                   href={`/portfolio/${item.slug}`}
@@ -39,11 +106,6 @@ export default function PortfolioPage() {
                   <p className="text-sm text-brand-navy/70">{item.summary}</p>
                 </Link>
               ))}
-            </div>
-          ) : (
-            <div className="rounded-2xl border border-dashed border-brand-navy/20 p-10 text-center text-brand-navy/70">
-              Nossos primeiros cases estão em produção. Fale com a gente para
-              saber como o seu projeto pode ser o próximo aqui.
             </div>
           )}
         </Container>

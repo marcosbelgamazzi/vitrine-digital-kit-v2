@@ -13,7 +13,7 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-brand-navy/10 bg-brand-white/90 backdrop-blur">
       <Container className="flex h-16 items-center justify-between">
-        <Logo />
+        <Logo size="md" />
 
         <nav className="hidden items-center gap-6 lg:flex" aria-label="Principal">
           {mainNav.map((item) => (
