@@ -1,7 +1,29 @@
 import { Container } from "@/components/ui/container";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { Button } from "@/components/ui/button";
-import { processSteps } from "@/lib/process";
+
+/**
+ * Versão resumida (4 macroetapas) das 7 etapas de src/lib/process.ts,
+ * só para a Home. A página /como-trabalhamos mantém as 7 etapas completas.
+ */
+const macroSteps = [
+  {
+    title: "Descoberta e planejamento",
+    description: "Entendemos seu negócio, objetivos e público, e definimos escopo e prazos.",
+  },
+  {
+    title: "Estrutura, design e desenvolvimento",
+    description: "Organizamos o conteúdo e construímos a interface e o site.",
+  },
+  {
+    title: "Revisão e publicação",
+    description: "Testamos, ajustamos e colocamos o site no ar.",
+  },
+  {
+    title: "Suporte e evolução",
+    description: "Acompanhamos e evoluímos o site depois do lançamento.",
+  },
+];
 
 export function ProcessTeaser() {
   return (
@@ -14,7 +36,7 @@ export function ProcessTeaser() {
           </Button>
         </div>
         <ol className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          {processSteps.map((step, index) => (
+          {macroSteps.map((step, index) => (
             <li key={step.title} className="flex flex-col gap-2">
               <span className="text-sm font-semibold text-brand-violet">
                 {String(index + 1).padStart(2, "0")}

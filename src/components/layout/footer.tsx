@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Container } from "@/components/ui/container";
+import { Logo } from "@/components/ui/logo";
 import { siteConfig, buildWhatsAppLink } from "@/config/site";
 import { footerNav } from "@/lib/nav";
 import { TrackedLink } from "@/components/analytics/tracked-link";
@@ -11,7 +12,7 @@ export function Footer() {
     <footer className="bg-brand-navy text-brand-white">
       <Container className="grid gap-10 py-14 sm:grid-cols-2 lg:grid-cols-3">
         <div className="flex flex-col gap-3">
-          <span className="text-lg font-semibold">{siteConfig.name}</span>
+          <Logo tone="dark" />
           <p className="max-w-xs text-sm text-brand-white/70">
             {siteConfig.slogan}
           </p>

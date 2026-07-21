@@ -3,19 +3,19 @@ import { SectionHeading } from "@/components/ui/section-heading";
 
 const benefits = [
   {
-    title: "Mobile-first de verdade",
+    title: "Funciona bem no celular",
     description: "Testado em diferentes tamanhos de tela, do celular ao desktop.",
   },
   {
-    title: "SEO técnico desde a fundação",
-    description: "Estrutura pensada para ser encontrada nos buscadores.",
+    title: "Feito para aparecer no Google",
+    description: "Estrutura técnica pensada desde o início para ser encontrada nos buscadores (SEO técnico).",
   },
   {
-    title: "Design moderno",
-    description: "Visual atual, alinhado à identidade e ao público do seu negócio.",
+    title: "Visual que passa confiança",
+    description: "Design atual, alinhado à identidade e ao público do seu negócio.",
   },
   {
-    title: "Suporte após a publicação",
+    title: "Você não fica sozinho depois",
     description: "Acompanhamento e evolução contínua do seu site no ar.",
   },
 ];

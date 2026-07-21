@@ -29,4 +29,14 @@ export const homeFaq: FaqItem[] = [
     answer:
       "Sim, oferecemos manutenção e evolução contínua do site depois da publicação. Fale com a gente para entender as opções disponíveis.",
   },
+  {
+    question: "Vocês atendem empresas de qualquer cidade?",
+    answer:
+      "Sim. Todo o processo é feito remotamente — briefing, alinhamentos e entregas acontecem pelo WhatsApp e outras ferramentas online, então atendemos negócios de qualquer cidade do Brasil.",
+  },
+  {
+    question: "Posso começar com um site mais simples e ampliar depois?",
+    answer:
+      "Sim. Muitos projetos começam enxutos e ganham novas páginas, integrações ou funcionalidades conforme o negócio cresce.",
+  },
 ];

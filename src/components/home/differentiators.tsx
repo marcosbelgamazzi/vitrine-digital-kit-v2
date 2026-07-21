@@ -2,10 +2,10 @@ import { Container } from "@/components/ui/container";
 import { SectionHeading } from "@/components/ui/section-heading";
 
 const items = [
-  "Comunicação direta pelo WhatsApp em todas as etapas",
-  "Processo transparente, sem surpresas no meio do caminho",
-  "Projetos sob medida, sem templates genéricos",
-  "Atenção a performance, acessibilidade e SEO técnico desde o início",
+  "Atendimento direto com quem constrói o seu site — sem intermediários, do orçamento à publicação",
+  "Solução do tamanho do seu negócio: começa simples e ganha novas funcionalidades conforme a necessidade",
+  "Projeto pensado para o seu negócio específico, sem pacotes fechados iguais para todo mundo",
+  "Processo transparente, com comunicação direta pelo WhatsApp em cada etapa",
 ];
 
 export function Differentiators() {

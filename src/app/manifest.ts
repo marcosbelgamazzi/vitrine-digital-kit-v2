@@ -1,10 +1,6 @@
 import type { MetadataRoute } from "next";
 import { siteConfig } from "@/config/site";
 
-/**
- * Ícones 192x192 e 512x512 dependem dos assets oficiais do logo — ver
- * docs/PENDENCIAS.md. Usando o favicon padrão enquanto isso.
- */
 export default function manifest(): MetadataRoute.Manifest {
   return {
     name: siteConfig.name,
@@ -16,9 +12,19 @@ export default function manifest(): MetadataRoute.Manifest {
     theme_color: "#0D1124",
     icons: [
       {
-        src: "/favicon.ico",
+        src: "/brand/favicon.ico",
         sizes: "any",
         type: "image/x-icon",
+      },
+      {
+        src: "/brand/icon-192.png",
+        sizes: "192x192",
+        type: "image/png",
+      },
+      {
+        src: "/brand/icon-512.png",
+        sizes: "512x512",
+        type: "image/png",
       },
     ],
   };

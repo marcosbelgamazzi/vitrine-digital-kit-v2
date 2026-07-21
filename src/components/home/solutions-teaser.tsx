@@ -11,7 +11,7 @@ export function SolutionsTeaser() {
           <SectionHeading
             eyebrow="Soluções"
             title="Qual é o seu objetivo agora?"
-            description="Organizamos nossa oferta pela necessidade do seu negócio, não só pelo tipo de serviço."
+            description="Não sabe qual serviço escolher? Comece pelo objetivo do seu negócio — a gente indica o caminho certo."
           />
           <Button href="/solucoes" variant="secondary" className="shrink-0">
             Ver todas as soluções

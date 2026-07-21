@@ -9,6 +9,9 @@ export function Hero() {
         className="pointer-events-none absolute inset-0 bg-gradient-to-br from-brand-violet/30 via-transparent to-brand-blue/20"
       />
       <Container className="relative flex flex-col items-start gap-6 py-24 sm:py-32">
+        <span className="text-sm font-semibold uppercase tracking-wide text-brand-coral">
+          Criação de sites e soluções digitais
+        </span>
         <h1 className="max-w-2xl text-4xl font-semibold tracking-tight sm:text-5xl">
           Seu negócio merece ser visto.
         </h1>

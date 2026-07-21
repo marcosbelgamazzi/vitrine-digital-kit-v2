@@ -1,22 +1,31 @@
+import Image from "next/image";
 import Link from "next/link";
 import { siteConfig } from "@/config/site";
 
 /**
- * Placeholder tipográfico do monograma VD. Nenhum asset oficial de logo foi
- * fornecido — ver docs/PENDENCIAS.md. Substituir pelo SVG oficial assim que
- * disponível, sem redesenhar a marca definitiva aqui.
+ * Logo oficial (kit de marca). tone descreve o fundo em que a logo é
+ * aplicada: "dark" usa a versão com texto claro (logo-horizontal.svg),
+ * "light" (padrão) usa a versão com texto navy (logo-horizontal-dark.svg).
  */
-export function Logo({ className = "" }: { className?: string }) {
+export function Logo({
+  className = "",
+  tone = "light",
+}: {
+  className?: string;
+  tone?: "light" | "dark";
+}) {
+  const src =
+    tone === "dark"
+      ? "/brand/logo-horizontal.svg"
+      : "/brand/logo-horizontal-dark.svg";
+
   return (
     <Link
       href="/"
-      className={`flex items-center gap-2 font-semibold tracking-tight ${className}`}
+      className={`flex items-center ${className}`}
       aria-label={siteConfig.name}
     >
-      <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-gradient-to-br from-brand-violet to-brand-blue text-sm font-bold text-brand-white">
-        VD
-      </span>
-      <span className="text-base">{siteConfig.name}</span>
+      <Image src={src} alt={siteConfig.name} width={175} height={40} priority className="h-8 w-auto sm:h-9" />
     </Link>
   );
 }

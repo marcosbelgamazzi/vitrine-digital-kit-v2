@@ -26,6 +26,15 @@ export const metadata: Metadata = {
   },
   description: siteConfig.description,
   alternates: { canonical: "/" },
+  icons: {
+    icon: [
+      { url: "/brand/favicon.ico", sizes: "any" },
+      { url: "/brand/favicon.svg", type: "image/svg+xml" },
+      { url: "/brand/icon-192.png", sizes: "192x192", type: "image/png" },
+      { url: "/brand/icon-512.png", sizes: "512x512", type: "image/png" },
+    ],
+    apple: [{ url: "/brand/apple-touch-icon.png", sizes: "180x180" }],
+  },
   openGraph: {
     type: "website",
     locale: "pt_BR",
@@ -33,11 +42,13 @@ export const metadata: Metadata = {
     title: siteConfig.name,
     description: siteConfig.description,
     url: "/",
+    images: [{ url: "/brand/og-image.png", width: 1200, height: 630, alt: siteConfig.name }],
   },
   twitter: {
-    card: "summary",
+    card: "summary_large_image",
     title: siteConfig.name,
     description: siteConfig.description,
+    images: ["/brand/og-image.png"],
   },
 };
 

@@ -3,8 +3,17 @@ import { SectionHeading } from "@/components/ui/section-heading";
 import { Button } from "@/components/ui/button";
 import { services } from "@/lib/services";
 
+const homeSlugs = [
+  "sites-institucionais",
+  "landing-pages",
+  "sites-profissionais",
+  "sistemas-web-personalizados",
+];
+
 export function ServicesTeaser() {
-  const featured = services.slice(0, 6);
+  const featured = homeSlugs
+    .map((slug) => services.find((service) => service.slug === slug))
+    .filter((service): service is (typeof services)[number] => Boolean(service));
 
   return (
     <section className="py-16 sm:py-20">
@@ -12,14 +21,14 @@ export function ServicesTeaser() {
         <div className="flex flex-col items-start justify-between gap-6 sm:flex-row sm:items-end">
           <SectionHeading
             eyebrow="Serviços"
-            title="O que fazemos"
-            description="Do primeiro site à evolução contínua do seu projeto digital."
+            title="O que entregamos"
+            description="Sites e sistemas prontos para o seu negócio. Catálogo completo com mais opções em /servicos."
           />
           <Button href="/servicos" variant="secondary" className="shrink-0">
             Ver todos os serviços
           </Button>
         </div>
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {featured.map((service) => (
             <div
               key={service.slug}

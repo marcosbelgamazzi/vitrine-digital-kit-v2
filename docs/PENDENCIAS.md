@@ -4,23 +4,26 @@ Registro de itens que dependem de decisão ou material externo. Não inventar
 valores definitivos para os itens abaixo — usar placeholder discreto e
 documentado até que a informação real seja fornecida.
 
-## Assets de marca
+## Assets de marca — resolvido
 
-- **Logo (monograma VD)**: identidade e conceito aprovados, mas nenhum
-  arquivo oficial (SVG/PNG) foi entregue ainda. Estrutura `/public/brand/`
-  criada (Fase 12) para receber os arquivos definitivos — ver
-  `public/brand/README.md` para a lista exata de arquivos esperados.
-  Enquanto isso, mantido o placeholder textual/tipográfico discreto no
-  Header e Footer (`src/components/ui/logo.tsx`). Não redesenhar um logo
-  definitivo em CSS. Substituir assim que os arquivos oficiais forem
-  entregues em `/public/brand/`.
-- **Favicon/manifest/ícones PWA**: o `favicon.ico` atual é o gerado pelo
-  `create-next-app`. O `manifest.ts` (Fase 08) usa esse mesmo favicon como
-  ícone único — faltam `icon-192.png` e `icon-512.png` com a identidade
-  oficial (ver `public/brand/README.md`).
-- **Imagem Open Graph**: nenhuma imagem oficial (`og-image.png`) foi
-  definida — as páginas ficam sem preview de imagem ao compartilhar links
-  até que o asset seja entregue em `/public/brand/`.
+- **Logo (monograma VD)**: assets oficiais do Kit Oficial de Marca
+  integrados em `/public/brand/` (SVGs mestres: `symbol.svg`,
+  `logo-horizontal.svg`, `logo-horizontal-dark.svg`, `logo-white.svg`,
+  `logo-stacked.svg`, `favicon.svg`). `src/components/ui/logo.tsx` usa a
+  logo oficial (`tone="light"` → `logo-horizontal-dark.svg` no Header;
+  `tone="dark"` → `logo-horizontal.svg` no Footer). Placeholder tipográfico
+  removido.
+- **Favicon/manifest/ícones PWA**: derivados raster gerados a partir de
+  `symbol.svg` (renderização via Chromium headless, sem distorção nem
+  efeitos adicionados ao asset-base): `favicon.ico` (multi-tamanho
+  16/32/48), `apple-touch-icon.png` (180×180, fundo navy sólido conforme
+  exigido pelo iOS), `icon-192.png` e `icon-512.png` (fundo transparente).
+  `manifest.ts` e `layout.tsx` (`metadata.icons`) atualizados para
+  referenciá-los.
+- **Imagem Open Graph**: `og-image.png` (1200×630) gerado com a identidade
+  oficial (símbolo + wordmark + slogan, tipografia Poppins), aplicado
+  globalmente via `src/lib/seo.ts` (todas as páginas) e `layout.tsx`
+  (Home).
 
 ## Conteúdo real
 
