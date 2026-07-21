@@ -1,0 +1,21 @@
+# Checklist
+
+- [x] Fase 00 — Fundação
+- [x] Fase 01 — Design System
+- [x] Fase 02 — Home
+- [x] Fase 03 — Serviços e Soluções
+- [x] Fase 04 — Portfólio e Cases
+- [x] Fase 05 — Como Trabalhamos
+- [x] Fase 06 — Orçamento e WhatsApp
+- [x] Fase 07 — Sobre, Contato e FAQ
+- [x] Fase 08 — SEO e Marketing
+- [x] Fase 09 — Analytics
+- [x] Fase 10 — Performance, Acessibilidade e Segurança
+- [x] Fase 11 — QA e Refinamento
+- [x] Fase 12 — Produção
+- [x] 9 rotas principais validadas
+- [x] WhatsApp centralizado
+- [x] Mensagens contextuais validadas
+- [x] Lint aprovado
+- [x] TypeScript aprovado
+- [x] Build aprovado

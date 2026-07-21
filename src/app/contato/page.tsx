@@ -1,0 +1,63 @@
+import { Container } from "@/components/ui/container";
+import { PageHero } from "@/components/ui/page-hero";
+import { SectionHeading } from "@/components/ui/section-heading";
+import { Faq } from "@/components/faq/faq";
+import { ContactForm } from "@/components/contato/contact-form";
+import { siteConfig, buildWhatsAppLink } from "@/config/site";
+import { homeFaq } from "@/lib/faq";
+import { pageMetadata } from "@/lib/seo";
+import { TrackedLink } from "@/components/analytics/tracked-link";
+
+export const metadata = pageMetadata({
+  title: "Contato",
+  description:
+    "Fale com a Vitrine Digital pelo WhatsApp ou envie sua mensagem pelo formulário de contato.",
+  path: "/contato",
+});
+
+export default function ContatoPage() {
+  return (
+    <>
+      <PageHero
+        eyebrow="Contato"
+        title="Vamos conversar?"
+        description="Fale diretamente com a gente pelo WhatsApp ou envie sua mensagem abaixo."
+      />
+
+      <section className="py-16 sm:py-20">
+        <Container className="grid gap-12 lg:grid-cols-2">
+          <div className="flex flex-col gap-4">
+            <h2 className="font-semibold text-brand-navy">WhatsApp</h2>
+            <TrackedLink
+              event="whatsapp_click"
+              eventParams={{ source: "contato-page" }}
+              href={buildWhatsAppLink(
+                "Olá! Vim pelo site e quero falar com vocês.",
+              )}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-brand-violet underline underline-offset-4"
+            >
+              {siteConfig.whatsapp.display}
+            </TrackedLink>
+            <p className="text-sm text-brand-navy/70">
+              Nosso canal principal de contato — respostas mais rápidas por
+              aqui.
+            </p>
+          </div>
+
+          <ContactForm />
+        </Container>
+      </section>
+
+      <section className="bg-brand-white py-16 sm:py-20">
+        <Container className="flex flex-col gap-10">
+          <SectionHeading center eyebrow="Dúvidas frequentes" title="Perguntas frequentes" />
+          <div className="mx-auto w-full max-w-2xl">
+            <Faq items={homeFaq} />
+          </div>
+        </Container>
+      </section>
+    </>
+  );
+}
