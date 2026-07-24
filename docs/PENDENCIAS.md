@@ -27,20 +27,28 @@ documentado até que a informação real seja fornecida.
 
 ## Conteúdo real
 
-- **Portfólio/cases**: nenhum projeto real foi informado ainda. A estrutura de
-  dados foi criada em `src/lib/portfolio.ts` (Fase 04), mas o array
-  `caseStudies` está vazio — preencher apenas com projetos reais, nunca com
+- **Portfólio/cases**: primeiro case real cadastrado em `src/lib/portfolio.ts`
+  (`caseStudies`): "6ª Festa do Padroeiro São Sebastião" (slug
+  `festa-sao-sebastiao`), com galeria real em `public/portfolio/`. Campos
+  `technologies` e `results` desse case seguem vazios (não informados) —
+  preencher apenas quando os dados reais forem fornecidos. Novos cases devem
+  ser adicionados ao mesmo array, sempre com projetos reais, nunca com
   clientes, depoimentos ou resultados fictícios.
 - **Sobre/Contato**: não inventar anos de mercado, equipe, prêmios ou
   certificações. Usar apenas o que for fornecido.
 
 ## Integrações
 
-- **Domínio de produção**: nenhuma URL oficial foi fornecida. `siteUrl` em
-  `src/config/site.ts` usa `NEXT_PUBLIC_SITE_URL` com fallback para
-  `http://localhost:3000`, usado em `metadataBase`, `sitemap.ts` e
-  `robots.ts`. Configurar a variável de ambiente no Vercel assim que o
-  domínio oficial for definido (Fase 12).
+- **Domínio de produção — configurado, DNS pendente**: domínio oficial
+  `vittrinedigital.com.br` (e `www.`) vinculado ao projeto Vercel
+  (`vitrine-digital-ro`) e `NEXT_PUBLIC_SITE_URL` definido em produção
+  (`https://vittrinedigital.com.br`), usado em `metadataBase`, `sitemap.ts`
+  e `robots.ts`. Falta apenas o passo no registrador do domínio
+  (Registro.br): apontar o registro `A vittrinedigital.com.br 76.76.21.21`
+  (e o mesmo para `www`), ou trocar os nameservers para
+  `ns1.vercel-dns.com` / `ns2.vercel-dns.com`. Até essa configuração de DNS
+  ser feita, o domínio não resolve — o site segue acessível normalmente em
+  `vitrine-digital-ro.vercel.app`.
 - **Analytics**: Google Analytics, GTM e Meta Pixel estão preparados
   estruturalmente (`src/components/analytics/`), mas os scripts só carregam
   se `NEXT_PUBLIC_GA_ID`, `NEXT_PUBLIC_GTM_ID` ou `NEXT_PUBLIC_META_PIXEL_ID`
