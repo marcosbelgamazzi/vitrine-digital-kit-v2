@@ -9,7 +9,7 @@ import { siteConfig } from "@/config/site";
  */
 const sizeClasses = {
   sm: "h-8 w-auto sm:h-9",
-  md: "h-10 w-auto sm:h-11",
+  md: "h-12 w-auto sm:h-14",
 };
 
 export function Logo({
