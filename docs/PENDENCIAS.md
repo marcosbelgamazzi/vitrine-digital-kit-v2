@@ -46,6 +46,17 @@ documentado até que a informação real seja fornecida.
   produção como `https://vittrinedigital.com.br`, usado em `metadataBase`,
   `sitemap.ts` e `robots.ts`. HTTPS provisionado automaticamente pela
   Vercel.
+- **E-mail corporativo (Zoho Mail) — bloqueado**: tentativa de configurar
+  `contato@vittrinedigital.com.br` via Zoho Mail. O domínio correto
+  (`vittrinedigital.com.br`) não pôde ser adicionado ao Zoho Mail Admin
+  Console porque o Zoho retorna "domain appears to be already in use in
+  another organization" — provavelmente reivindicado em uma tentativa/trial
+  anterior esquecida (o `TXT` `zoho-verification=zb63473231.zmverify.zoho.com`
+  já presente no DNS antes desta configuração é evidência disso). Não há
+  ainda registros `MX`, SPF ou DKIM no DNS — e-mail não está funcional.
+  Próximo passo: localizar a organização Zoho antiga que reivindicou o
+  domínio (buscar e-mails antigos de verificação Zoho) ou abrir chamado no
+  suporte Zoho pedindo a liberação do domínio. Retomar depois.
 - **Analytics**: Google Analytics, GTM e Meta Pixel estão preparados
   estruturalmente (`src/components/analytics/`), mas os scripts só carregam
   se `NEXT_PUBLIC_GA_ID`, `NEXT_PUBLIC_GTM_ID` ou `NEXT_PUBLIC_META_PIXEL_ID`
