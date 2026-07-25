@@ -75,10 +75,17 @@ documentado até que a informação real seja fornecida.
 
 ## Segurança
 
-- **`npm audit`**: reporta 2 vulnerabilidades moderadas de XSS no `postcss`
-  usado internamente pelo próprio `next` (`node_modules/next/node_modules/postcss`,
-  não uma dependência direta do projeto). O único fix automático
-  (`npm audit fix --force`) rebaixaria o Next.js para `9.3.3` (7 major
-  versions abaixo), o que é pior que o problema original — não aplicado.
-  Reavaliar quando o Next.js publicar uma versão com o postcss interno
-  atualizado.
+- **Next.js atualizado (16.2.10 → 16.2.11)**: corrigida vulnerabilidade alta
+  "Unauthenticated disclosure of internal Server Function endpoints"
+  (GHSA-955p-x3mx-jcvp) no próprio Next.js. Build/lint/TypeScript
+  reverificados sem erros após a atualização.
+- **`npm audit`**: restam vulnerabilidades altas sem fix seguro disponível,
+  todas em dependências internas de ferramentas (não vão para o bundle de
+  produção): `postcss` e `sharp` usados internamente pelo próprio `next`
+  (`node_modules/next/node_modules/...`), e `brace-expansion`/`minimatch`
+  na cadeia do ESLint (`devDependency`, usado só em lint local, não afeta o
+  site publicado). O único fix automático (`npm audit fix --force`)
+  rebaixaria o Next.js para `9.3.3` (7 major versions abaixo) ou o ESLint
+  para uma versão com breaking changes — pior que o problema original, não
+  aplicado. Reavaliar quando essas ferramentas publicarem versões com as
+  dependências internas atualizadas.
