@@ -57,14 +57,15 @@ documentado até que a informação real seja fornecida.
   Próximo passo: localizar a organização Zoho antiga que reivindicou o
   domínio (buscar e-mails antigos de verificação Zoho) ou abrir chamado no
   suporte Zoho pedindo a liberação do domínio. Retomar depois.
-- **Analytics**: Google Analytics, GTM e Meta Pixel estão preparados
-  estruturalmente (`src/components/analytics/`), mas os scripts só carregam
-  se `NEXT_PUBLIC_GA_ID`, `NEXT_PUBLIC_GTM_ID` ou `NEXT_PUBLIC_META_PIXEL_ID`
-  forem definidos (ver `.env.example`). Nenhum ID real foi fornecido ainda.
-  Os eventos (`whatsapp_click`, `budget_start`, `budget_complete`,
-  `portfolio_view`, `service_view`, `contact_submit`, `cta_click`) já estão
-  disparando via `src/lib/analytics.ts`, mas não têm efeito até um ID real
-  ser configurado.
+- **Analytics — GA4 configurado**: propriedade GA4 "Vitrine Digital" criada,
+  ID de medição `G-XKMCXFV8ZS` definido em `NEXT_PUBLIC_GA_ID` (produção,
+  Vercel) e confirmado ativo em `https://vittrinedigital.com.br`. Os
+  eventos (`whatsapp_click`, `budget_start`, `budget_complete`,
+  `portfolio_view`, `service_view`, `contact_submit`, `cta_click`) via
+  `src/lib/analytics.ts` já estão sendo enviados ao GA4. GTM e Meta Pixel
+  seguem preparados estruturalmente (`src/components/analytics/`) mas sem
+  ID configurado (`NEXT_PUBLIC_GTM_ID`, `NEXT_PUBLIC_META_PIXEL_ID`) —
+  opcionais, configurar apenas se/quando forem necessários.
 
 ## Segurança
 
