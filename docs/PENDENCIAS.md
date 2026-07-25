@@ -57,15 +57,21 @@ documentado até que a informação real seja fornecida.
   Próximo passo: localizar a organização Zoho antiga que reivindicou o
   domínio (buscar e-mails antigos de verificação Zoho) ou abrir chamado no
   suporte Zoho pedindo a liberação do domínio. Retomar depois.
-- **Analytics — GA4 configurado**: propriedade GA4 "Vitrine Digital" criada,
-  ID de medição `G-XKMCXFV8ZS` definido em `NEXT_PUBLIC_GA_ID` (produção,
-  Vercel) e confirmado ativo em `https://vittrinedigital.com.br`. Os
-  eventos (`whatsapp_click`, `budget_start`, `budget_complete`,
-  `portfolio_view`, `service_view`, `contact_submit`, `cta_click`) via
-  `src/lib/analytics.ts` já estão sendo enviados ao GA4. GTM e Meta Pixel
-  seguem preparados estruturalmente (`src/components/analytics/`) mas sem
-  ID configurado (`NEXT_PUBLIC_GTM_ID`, `NEXT_PUBLIC_META_PIXEL_ID`) —
-  opcionais, configurar apenas se/quando forem necessários.
+- **Analytics — GA4 e GTM configurados**: propriedade GA4 "Vitrine Digital"
+  criada, ID de medição `G-XKMCXFV8ZS` definido em `NEXT_PUBLIC_GA_ID`
+  (produção, Vercel) e confirmado ativo em `https://vittrinedigital.com.br`.
+  Container GTM "Vitrine Digital" criado, ID `GTM-P2HCVHQZ` definido em
+  `NEXT_PUBLIC_GTM_ID` e confirmado ativo. Os eventos (`whatsapp_click`,
+  `budget_start`, `budget_complete`, `portfolio_view`, `service_view`,
+  `contact_submit`, `cta_click`) via `src/lib/analytics.ts` já estão sendo
+  enviados ao GA4.
+- **Meta Pixel — bloqueado**: portfólio empresarial Meta Business "Vitrine
+  Digital" (ID `4442878092595392`) criado, mas a Meta aplicou uma restrição
+  automática de segurança à conta ("Sua empresa está proibida de anunciar
+  ou criar pixels" — suspeita de automação), impedindo a criação do Pixel.
+  Solicitada revisão ("Pedir análise") no painel da Meta; resultado
+  pendente. Retomar a criação do Pixel nesse mesmo portfólio assim que a
+  restrição for removida — não criar um portfólio novo.
 
 ## Segurança
 
