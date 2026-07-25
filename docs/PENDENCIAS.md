@@ -39,16 +39,13 @@ documentado até que a informação real seja fornecida.
 
 ## Integrações
 
-- **Domínio de produção — configurado, DNS pendente**: domínio oficial
+- **Domínio de produção — resolvido**: domínio oficial
   `vittrinedigital.com.br` (e `www.`) vinculado ao projeto Vercel
-  (`vitrine-digital-ro`) e `NEXT_PUBLIC_SITE_URL` definido em produção
-  (`https://vittrinedigital.com.br`), usado em `metadataBase`, `sitemap.ts`
-  e `robots.ts`. Falta apenas o passo no registrador do domínio
-  (Registro.br): apontar o registro `A vittrinedigital.com.br 76.76.21.21`
-  (e o mesmo para `www`), ou trocar os nameservers para
-  `ns1.vercel-dns.com` / `ns2.vercel-dns.com`. Até essa configuração de DNS
-  ser feita, o domínio não resolve — o site segue acessível normalmente em
-  `vitrine-digital-ro.vercel.app`.
+  (`vitrine-digital-ro`), DNS configurado no Registro.br (registro `A`
+  para `76.76.21.21`) e propagado. `NEXT_PUBLIC_SITE_URL` definido em
+  produção como `https://vittrinedigital.com.br`, usado em `metadataBase`,
+  `sitemap.ts` e `robots.ts`. HTTPS provisionado automaticamente pela
+  Vercel.
 - **Analytics**: Google Analytics, GTM e Meta Pixel estão preparados
   estruturalmente (`src/components/analytics/`), mas os scripts só carregam
   se `NEXT_PUBLIC_GA_ID`, `NEXT_PUBLIC_GTM_ID` ou `NEXT_PUBLIC_META_PIXEL_ID`
