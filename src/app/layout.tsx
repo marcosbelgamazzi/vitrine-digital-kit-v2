@@ -26,6 +26,9 @@ export const metadata: Metadata = {
   },
   description: siteConfig.description,
   alternates: { canonical: "/" },
+  verification: {
+    google: "Vg8sWW5N8fHEsOzUx-ZR2X2jzudlx9fPLrZROTG5sds",
+  },
   icons: {
     icon: [
       { url: "/brand/favicon.ico", sizes: "any" },
