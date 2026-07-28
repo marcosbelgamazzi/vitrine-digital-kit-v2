@@ -54,9 +54,10 @@ documentado até que a informação real seja fornecida.
   anterior esquecida (o `TXT` `zoho-verification=zb63473231.zmverify.zoho.com`
   já presente no DNS antes desta configuração é evidência disso). Não há
   ainda registros `MX`, SPF ou DKIM no DNS — e-mail não está funcional.
-  Próximo passo: localizar a organização Zoho antiga que reivindicou o
-  domínio (buscar e-mails antigos de verificação Zoho) ou abrir chamado no
-  suporte Zoho pedindo a liberação do domínio. Retomar depois.
+  Rechecado em 27/07/2026: erro idêntico ao tentar adicionar o domínio de
+  novo. Chamado de suporte enviado por e-mail a support@zohomail.com (o
+  formulário interno do painel Zoho retornou erro ao tentar enviar)
+  solicitando a liberação do domínio. Aguardando resposta do suporte Zoho.
 - **Analytics — GA4 e GTM configurados**: propriedade GA4 "Vitrine Digital"
   criada, ID de medição `G-XKMCXFV8ZS` definido em `NEXT_PUBLIC_GA_ID`
   (produção, Vercel) e confirmado ativo em `https://vittrinedigital.com.br`.
@@ -70,8 +71,13 @@ documentado até que a informação real seja fornecida.
   automática de segurança à conta ("Sua empresa está proibida de anunciar
   ou criar pixels" — suspeita de automação), impedindo a criação do Pixel.
   Solicitada revisão ("Pedir análise") no painel da Meta; resultado
-  pendente. Retomar a criação do Pixel nesse mesmo portfólio assim que a
-  restrição for removida — não criar um portfólio novo.
+  pendente. Rechecado em 27/07/2026: restrição continua ativa ("Você não
+  pode usar este portfólio empresarial para anunciar"); o botão "Ver
+  detalhes" trava carregando indefinidamente no painel, sem exibir prazo
+  ou status da análise. Não há ação adicional possível do nosso lado —
+  depende só da revisão manual da Meta. Retomar a criação do Pixel nesse
+  mesmo portfólio assim que a restrição for removida — não criar um
+  portfólio novo.
 
 ## Segurança
 
