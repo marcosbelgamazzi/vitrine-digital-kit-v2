@@ -66,6 +66,16 @@ documentado até que a informação real seja fornecida.
   `budget_start`, `budget_complete`, `portfolio_view`, `service_view`,
   `contact_submit`, `cta_click`) via `src/lib/analytics.ts` já estão sendo
   enviados ao GA4.
+- **Google Search Console — configurado (27/07/2026)**: propriedade
+  `https://vittrinedigital.com.br/` verificada via meta tag
+  (`verification.google` em `src/app/layout.tsx`), sitemap
+  (`sitemap.xml`) enviado, e a inspeção de URL confirma "A página está
+  indexada", sem ações manuais pendentes. O site aparece normalmente
+  via `site:vittrinedigital.com.br`. Não aparece ainda em buscas
+  genéricas como "vitrine digital" — termo disputado por outras
+  empresas (Tupperware, sinalização digital, outras agências); domínio
+  muito novo, sem autoridade/backlinks acumulados. Isso é esperado e
+  não é um problema técnico — melhora com tempo, conteúdo e links.
 - **Meta Pixel — bloqueado**: portfólio empresarial Meta Business "Vitrine
   Digital" (ID `4442878092595392`) criado, mas a Meta aplicou uma restrição
   automática de segurança à conta ("Sua empresa está proibida de anunciar
