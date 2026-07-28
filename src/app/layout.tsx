@@ -61,6 +61,7 @@ const organizationJsonLd = {
   name: siteConfig.name,
   description: siteConfig.description,
   url: siteUrl,
+  logo: `${siteUrl}/brand/icon-512.png`,
   contactPoint: {
     "@type": "ContactPoint",
     telephone: siteConfig.whatsapp.international,

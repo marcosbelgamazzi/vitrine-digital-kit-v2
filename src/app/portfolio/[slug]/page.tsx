@@ -56,6 +56,7 @@ export default async function CasePage({
                 src={item.cover}
                 alt={`Captura de tela do projeto ${item.name}`}
                 fill
+                sizes="100vw"
                 className="object-cover object-top"
                 priority
               />
@@ -130,6 +131,7 @@ export default async function CasePage({
                       src={image}
                       alt={`Tela do projeto ${item.name}`}
                       fill
+                      sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
                       className="object-cover object-top"
                     />
                   </div>
