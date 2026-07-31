@@ -1,6 +1,8 @@
+import { MessageCircle, Ruler, ShieldCheck } from "lucide-react";
 import { Container } from "@/components/ui/container";
 import { PageHero } from "@/components/ui/page-hero";
 import { CtaBanner } from "@/components/ui/cta-banner";
+import { Reveal } from "@/components/ui/reveal";
 import { pageMetadata } from "@/lib/seo";
 
 export const metadata = pageMetadata({
@@ -15,16 +17,19 @@ const values = [
     title: "Comunicação direta",
     description:
       "Sem burocracia: você fala com quem está de fato trabalhando no seu projeto, pelo WhatsApp.",
+    icon: MessageCircle,
   },
   {
     title: "Trabalho sob medida",
     description:
       "Cada site é pensado a partir do seu negócio, não de um template genérico reaproveitado.",
+    icon: Ruler,
   },
   {
     title: "Atenção aos detalhes técnicos",
     description:
       "Performance, responsividade, SEO técnico e acessibilidade fazem parte do processo, não são um extra.",
+    icon: ShieldCheck,
   },
 ];
 
@@ -50,11 +55,16 @@ export default function SobrePage() {
 
       <section className="bg-brand-white py-16 sm:py-20">
         <Container className="grid gap-8 sm:grid-cols-3">
-          {values.map((value) => (
-            <div key={value.title} className="flex flex-col gap-2">
-              <h2 className="font-semibold text-brand-navy">{value.title}</h2>
-              <p className="text-sm text-brand-navy/70">{value.description}</p>
-            </div>
+          {values.map((value, index) => (
+            <Reveal key={value.title} delay={index * 60}>
+              <div className="flex flex-col gap-2">
+                <span className="mb-1 flex h-11 w-11 items-center justify-center rounded-xl bg-gradient-to-br from-brand-violet/10 to-brand-blue/10 text-brand-violet">
+                  <value.icon className="h-5 w-5" aria-hidden="true" />
+                </span>
+                <h2 className="font-semibold text-brand-navy">{value.title}</h2>
+                <p className="text-sm text-brand-navy/70">{value.description}</p>
+              </div>
+            </Reveal>
           ))}
         </Container>
       </section>

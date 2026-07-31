@@ -1,3 +1,4 @@
+import { MessageCircle } from "lucide-react";
 import { Container } from "@/components/ui/container";
 import { PageHero } from "@/components/ui/page-hero";
 import { SectionHeading } from "@/components/ui/section-heading";
@@ -27,7 +28,12 @@ export default function ContatoPage() {
       <section className="py-16 sm:py-20">
         <Container className="grid gap-12 lg:grid-cols-2">
           <div className="flex flex-col gap-4">
-            <h2 className="font-semibold text-brand-navy">WhatsApp</h2>
+            <div className="flex items-center gap-3">
+              <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-gradient-to-br from-brand-violet/10 to-brand-blue/10 text-brand-violet">
+                <MessageCircle className="h-5 w-5" aria-hidden="true" />
+              </span>
+              <h2 className="font-semibold text-brand-navy">WhatsApp</h2>
+            </div>
             <TrackedLink
               event="whatsapp_click"
               eventParams={{ source: "contato-page" }}
