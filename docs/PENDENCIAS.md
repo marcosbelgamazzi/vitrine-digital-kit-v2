@@ -57,7 +57,17 @@ documentado até que a informação real seja fornecida.
   Rechecado em 27/07/2026: erro idêntico ao tentar adicionar o domínio de
   novo. Chamado de suporte enviado por e-mail a support@zohomail.com (o
   formulário interno do painel Zoho retornou erro ao tentar enviar)
-  solicitando a liberação do domínio. Aguardando resposta do suporte Zoho.
+  solicitando a liberação do domínio.
+  Atualização 30/07/2026: Zoho Accounts Support respondeu confirmando que o
+  domínio está vinculado a uma conta antiga desconhecida (`s**@vittrinedigital.com.br`,
+  não reconhecida pelo usuário) e pediu comprovação de posse via registro
+  `TXT` (`@` → `ZAC0597`) no DNS, com print do painel. TXT criado no
+  Registro.br e propagado (confirmado publicamente via Google/Cloudflare
+  DNS); os registros `A` existentes (raiz e `www`) não foram afetados.
+  Print do DNS enviado por e-mail em resposta ao chamado. Aguardando o
+  suporte Zoho liberar o domínio da organização antiga para permitir
+  adicioná-lo à conta atual (`Vittrine Digital`, Mail Premium Trial, 0
+  domínios cadastrados).
 - **Analytics — GA4 e GTM configurados**: propriedade GA4 "Vitrine Digital"
   criada, ID de medição `G-XKMCXFV8ZS` definido em `NEXT_PUBLIC_GA_ID`
   (produção, Vercel) e confirmado ativo em `https://vittrinedigital.com.br`.
