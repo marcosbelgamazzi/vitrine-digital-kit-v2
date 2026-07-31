@@ -1,5 +1,7 @@
+import { AlertCircle } from "lucide-react";
 import { Container } from "@/components/ui/container";
 import { SectionHeading } from "@/components/ui/section-heading";
+import { Reveal } from "@/components/ui/reveal";
 
 const problems = [
   "Site desatualizado, lento ou que não passa credibilidade",
@@ -19,14 +21,16 @@ export function Problems() {
           description="Muitos negócios ainda enfrentam os mesmos obstáculos online."
         />
         <ul className="flex flex-col gap-4">
-          {problems.map((problem) => (
-            <li key={problem} className="flex items-start gap-3 text-brand-white/80">
-              <span
-                aria-hidden="true"
-                className="mt-1 h-2 w-2 shrink-0 rounded-full bg-brand-coral"
-              />
-              {problem}
-            </li>
+          {problems.map((problem, index) => (
+            <Reveal key={problem} delay={index * 60}>
+              <li className="flex items-start gap-3 text-brand-white/80">
+                <AlertCircle
+                  aria-hidden="true"
+                  className="mt-0.5 h-5 w-5 shrink-0 text-brand-coral"
+                />
+                {problem}
+              </li>
+            </Reveal>
           ))}
         </ul>
       </Container>

@@ -44,14 +44,14 @@ export default function PortfolioPage() {
       <section className="pb-8 pt-16 sm:pb-10 sm:pt-20">
         <Container className="flex flex-col gap-10">
           {featured ? (
-            <div className="grid overflow-hidden rounded-2xl border border-brand-navy/10 lg:grid-cols-2">
-              <div className="relative aspect-video lg:aspect-auto">
+            <div className="group grid overflow-hidden rounded-2xl border border-brand-navy/10 lg:grid-cols-2">
+              <div className="relative aspect-video overflow-hidden lg:aspect-auto">
                 <Image
                   src={featured.cover}
                   alt={`Captura de tela do projeto ${featured.name}`}
                   fill
                   sizes="(min-width: 1024px) 50vw, 100vw"
-                  className="object-cover object-top"
+                  className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
                   priority
                 />
               </div>
@@ -98,7 +98,7 @@ export default function PortfolioPage() {
                 <Link
                   key={item.slug}
                   href={`/portfolio/${item.slug}`}
-                  className="flex flex-col gap-2 rounded-2xl border border-brand-navy/10 p-6 transition-colors hover:border-brand-violet/40"
+                  className="flex flex-col gap-2 rounded-2xl border border-brand-navy/10 p-6 transition-all duration-300 hover:-translate-y-1 hover:border-brand-violet/40 hover:shadow-lg hover:shadow-brand-violet/5"
                 >
                   <span className="text-xs font-semibold uppercase tracking-wide text-brand-violet">
                     {item.category}

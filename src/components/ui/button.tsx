@@ -8,14 +8,14 @@ type Variant = "primary" | "secondary" | "ghost";
 
 const variantClasses: Record<Variant, string> = {
   primary:
-    "bg-gradient-to-r from-brand-violet to-brand-blue text-brand-white hover:opacity-90",
+    "bg-gradient-to-r from-brand-violet to-brand-blue text-brand-white hover:opacity-90 hover:shadow-lg hover:shadow-brand-violet/25",
   secondary:
     "border border-brand-navy/15 text-brand-navy hover:bg-brand-navy/5",
   ghost: "text-brand-navy hover:bg-brand-navy/5",
 };
 
 const baseClasses =
-  "inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-medium transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-blue disabled:pointer-events-none disabled:opacity-50";
+  "inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-medium transition-all duration-200 hover:-translate-y-0.5 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-blue disabled:pointer-events-none disabled:opacity-50 disabled:hover:translate-y-0";
 
 type CommonProps = {
   variant?: Variant;

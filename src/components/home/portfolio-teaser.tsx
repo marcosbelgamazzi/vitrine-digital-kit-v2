@@ -22,14 +22,14 @@ export function PortfolioTeaser() {
         </div>
 
         {featured ? (
-          <div className="grid gap-8 overflow-hidden rounded-2xl border border-brand-navy/10 lg:grid-cols-2">
-            <div className="relative aspect-video lg:aspect-auto">
+          <div className="group grid gap-8 overflow-hidden rounded-2xl border border-brand-navy/10 lg:grid-cols-2">
+            <div className="relative aspect-video overflow-hidden lg:aspect-auto">
               <Image
                 src={featured.cover}
                 alt={`Captura de tela do projeto ${featured.name}`}
                 fill
                 sizes="(min-width: 1024px) 50vw, 100vw"
-                className="object-cover object-top"
+                className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
               />
             </div>
             <div className="flex flex-col justify-center gap-4 p-6 sm:p-10">
@@ -62,7 +62,7 @@ export function PortfolioTeaser() {
               <Link
                 key={item.slug}
                 href={`/portfolio/${item.slug}`}
-                className="flex flex-col gap-2 rounded-2xl border border-brand-navy/10 p-6 transition-colors hover:border-brand-violet/40"
+                className="flex flex-col gap-2 rounded-2xl border border-brand-navy/10 p-6 transition-all duration-300 hover:-translate-y-1 hover:border-brand-violet/40 hover:shadow-lg hover:shadow-brand-violet/5"
               >
                 <span className="text-xs font-semibold uppercase tracking-wide text-brand-violet">
                   {item.category}

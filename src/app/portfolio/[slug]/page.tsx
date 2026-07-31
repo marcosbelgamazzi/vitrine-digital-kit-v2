@@ -51,13 +51,13 @@ export default async function CasePage({
       <section className="py-16 sm:py-20">
         <Container className="flex flex-col gap-12">
           {item.cover && (
-            <div className="relative aspect-video overflow-hidden rounded-2xl border border-brand-navy/10">
+            <div className="group relative aspect-video overflow-hidden rounded-2xl border border-brand-navy/10">
               <Image
                 src={item.cover}
                 alt={`Captura de tela do projeto ${item.name}`}
                 fill
                 sizes="100vw"
-                className="object-cover object-top"
+                className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
                 priority
               />
             </div>
@@ -125,14 +125,14 @@ export default async function CasePage({
                 {item.gallery.map((image) => (
                   <div
                     key={image}
-                    className="relative aspect-video overflow-hidden rounded-xl border border-brand-navy/10"
+                    className="group relative aspect-video overflow-hidden rounded-xl border border-brand-navy/10"
                   >
                     <Image
                       src={image}
                       alt={`Tela do projeto ${item.name}`}
                       fill
                       sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
-                      className="object-cover object-top"
+                      className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
                     />
                   </div>
                 ))}

@@ -1,6 +1,7 @@
 import { Container } from "@/components/ui/container";
 import { PageHero } from "@/components/ui/page-hero";
 import { CtaBanner } from "@/components/ui/cta-banner";
+import { Reveal } from "@/components/ui/reveal";
 import { processSteps } from "@/lib/process";
 import { pageMetadata } from "@/lib/seo";
 
@@ -24,15 +25,20 @@ export default function ComoTrabalhamosPage() {
         <Container>
           <ol className="flex flex-col gap-10">
             {processSteps.map((step, index) => (
-              <li key={step.title} className="flex gap-6">
-                <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-brand-violet to-brand-blue text-sm font-semibold text-brand-white">
-                  {String(index + 1).padStart(2, "0")}
-                </span>
-                <div className="flex flex-col gap-1 pt-1.5">
-                  <h2 className="font-semibold text-brand-navy">{step.title}</h2>
-                  <p className="text-sm text-brand-navy/70">{step.description}</p>
-                </div>
-              </li>
+              <Reveal key={step.title} delay={index * 60}>
+                <li className="group flex gap-6">
+                  <span className="relative flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-brand-violet to-brand-blue text-brand-white transition-transform duration-300 group-hover:scale-110">
+                    <step.icon className="h-5 w-5" aria-hidden="true" />
+                    <span className="absolute -bottom-1.5 -right-1.5 flex h-5 w-5 items-center justify-center rounded-full bg-brand-white text-[10px] font-semibold text-brand-navy shadow-sm">
+                      {String(index + 1).padStart(2, "0")}
+                    </span>
+                  </span>
+                  <div className="flex flex-col gap-1 pt-1.5">
+                    <h2 className="font-semibold text-brand-navy">{step.title}</h2>
+                    <p className="text-sm text-brand-navy/70">{step.description}</p>
+                  </div>
+                </li>
+              </Reveal>
             ))}
           </ol>
         </Container>
