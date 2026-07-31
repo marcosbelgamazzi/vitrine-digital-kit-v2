@@ -31,10 +31,12 @@ export const caseStudies: CaseStudy[] = [
     cover: "/portfolio/festa-sao-sebastiao/cover.png",
     gallery: [
       "/portfolio/festa-sao-sebastiao/mobile.png",
-      "/portfolio/festa-sao-sebastiao/checkout-pix.png",
-      "/portfolio/festa-sao-sebastiao/central-cliente.png",
+      "/portfolio/festa-sao-sebastiao/enquete.png",
+      "/portfolio/festa-sao-sebastiao/produtos.png",
       "/portfolio/festa-sao-sebastiao/cartelas.png",
-      "/portfolio/festa-sao-sebastiao/painel-admin.png",
+      "/portfolio/festa-sao-sebastiao/admin-menu.png",
+      "/portfolio/festa-sao-sebastiao/pedidos-admin.png",
+      "/portfolio/festa-sao-sebastiao/cartelas-admin.png",
     ],
     challenge:
       "Centralizar em um único canal toda a operação de um evento paroquial de grande porte: divulgação, venda antecipada de cartelas e churrasco, controle de pedidos dos compradores e gestão administrativa — que antes dependia de canais fragmentados.",
