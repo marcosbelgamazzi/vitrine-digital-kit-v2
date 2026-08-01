@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Container } from "@/components/ui/container";
 import { Button } from "@/components/ui/button";
 
@@ -26,6 +27,12 @@ export function Hero() {
             Ver projetos
           </Button>
         </div>
+        <Link
+          href="/como-trabalhamos"
+          className="text-sm text-brand-white/70 underline underline-offset-4 transition-colors hover:text-brand-white"
+        >
+          Ainda não sabe por onde começar? Veja como funciona o processo
+        </Link>
       </Container>
     </section>
   );

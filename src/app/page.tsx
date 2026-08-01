@@ -1,5 +1,6 @@
 import { Hero } from "@/components/home/hero";
 import { ValueProof } from "@/components/home/value-proof";
+import { TechAuthority } from "@/components/home/tech-authority";
 import { Problems } from "@/components/home/problems";
 import { Solution } from "@/components/home/solution";
 import { Benefits } from "@/components/home/benefits";
@@ -16,6 +17,7 @@ export default function Home() {
     <>
       <Hero />
       <ValueProof />
+      <TechAuthority />
       <Problems />
       <Solution />
       <Benefits />
