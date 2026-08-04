@@ -1,4 +1,4 @@
-import { MessageCircle } from "lucide-react";
+import { Mail, MessageCircle } from "lucide-react";
 import { Container } from "@/components/ui/container";
 import { PageHero } from "@/components/ui/page-hero";
 import { SectionHeading } from "@/components/ui/section-heading";
@@ -50,6 +50,21 @@ export default function ContatoPage() {
               Nosso canal principal de contato — respostas mais rápidas por
               aqui.
             </p>
+
+            <div className="mt-6 flex items-center gap-3">
+              <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-gradient-to-br from-brand-violet/10 to-brand-blue/10 text-brand-violet">
+                <Mail className="h-5 w-5" aria-hidden="true" />
+              </span>
+              <h2 className="font-semibold text-brand-navy">E-mail</h2>
+            </div>
+            <TrackedLink
+              event="cta_click"
+              eventParams={{ source: "contato-page", type: "email" }}
+              href={`mailto:${siteConfig.email}`}
+              className="text-brand-violet underline underline-offset-4"
+            >
+              {siteConfig.email}
+            </TrackedLink>
           </div>
 
           <ContactForm />

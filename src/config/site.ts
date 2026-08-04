@@ -15,6 +15,7 @@ export const siteConfig = {
     international: "+55 69 98438-4210",
     e164: "5569984384210",
   },
+  email: "contato@vittrinedigital.com.br",
 } as const;
 
 /**

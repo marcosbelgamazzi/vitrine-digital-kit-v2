@@ -46,28 +46,24 @@ documentado até que a informação real seja fornecida.
   produção como `https://vittrinedigital.com.br`, usado em `metadataBase`,
   `sitemap.ts` e `robots.ts`. HTTPS provisionado automaticamente pela
   Vercel.
-- **E-mail corporativo (Zoho Mail) — bloqueado**: tentativa de configurar
-  `contato@vittrinedigital.com.br` via Zoho Mail. O domínio correto
-  (`vittrinedigital.com.br`) não pôde ser adicionado ao Zoho Mail Admin
-  Console porque o Zoho retorna "domain appears to be already in use in
-  another organization" — provavelmente reivindicado em uma tentativa/trial
-  anterior esquecida (o `TXT` `zoho-verification=zb63473231.zmverify.zoho.com`
-  já presente no DNS antes desta configuração é evidência disso). Não há
-  ainda registros `MX`, SPF ou DKIM no DNS — e-mail não está funcional.
-  Rechecado em 27/07/2026: erro idêntico ao tentar adicionar o domínio de
-  novo. Chamado de suporte enviado por e-mail a support@zohomail.com (o
-  formulário interno do painel Zoho retornou erro ao tentar enviar)
-  solicitando a liberação do domínio.
-  Atualização 30/07/2026: Zoho Accounts Support respondeu confirmando que o
-  domínio está vinculado a uma conta antiga desconhecida (`s**@vittrinedigital.com.br`,
-  não reconhecida pelo usuário) e pediu comprovação de posse via registro
-  `TXT` (`@` → `ZAC0597`) no DNS, com print do painel. TXT criado no
-  Registro.br e propagado (confirmado publicamente via Google/Cloudflare
-  DNS); os registros `A` existentes (raiz e `www`) não foram afetados.
-  Print do DNS enviado por e-mail em resposta ao chamado. Aguardando o
-  suporte Zoho liberar o domínio da organização antiga para permitir
-  adicioná-lo à conta atual (`Vittrine Digital`, Mail Premium Trial, 0
-  domínios cadastrados).
+- **E-mail corporativo (Zoho Mail) — resolvido**: domínio
+  `vittrinedigital.com.br` liberado pelo suporte Zoho da organização antiga
+  e adicionado com sucesso à conta atual (`Vittrine Digital`). Domínio
+  verificado via TXT `zoho-verification=zb37490382.zmverify.zoho.com`.
+  Conta `marcos.belgamazzi@vittrinedigital.com.br` criada como
+  Superadministrador. Registros de roteamento de e-mail adicionados no
+  Registro.br e confirmados propagados: `MX` (`mx.zoho.com` prioridade 10,
+  `mx2.zoho.com` prioridade 20, `mx3.zoho.com` prioridade 50), SPF (`TXT`
+  `@` → `v=spf1 include:zohomail.com ~all`) e DKIM (`TXT`
+  `zmail._domainkey` → chave pública RSA do Zoho). Verificação final no
+  Zoho Mail ("Verificar todos os registros") retornou "Todos os registros
+  foram notificados" — e-mail está funcional para envio e recebimento.
+  Etapa "Migração de e-mails" do assistente Zoho ainda não foi percorrida
+  (não solicitada); retomar apenas se o usuário pedir.
+  Alias `contato@vittrinedigital.com.br` criado no Zoho (mesma caixa do
+  Superadmin) e adicionado a `siteConfig.email` em `src/config/site.ts` —
+  exibido com link `mailto:` no rodapé (`src/components/layout/footer.tsx`)
+  e na página `/contato` (`src/app/contato/page.tsx`), ao lado do WhatsApp.
 - **Analytics — GA4 e GTM configurados**: propriedade GA4 "Vitrine Digital"
   criada, ID de medição `G-XKMCXFV8ZS` definido em `NEXT_PUBLIC_GA_ID`
   (produção, Vercel) e confirmado ativo em `https://vittrinedigital.com.br`.

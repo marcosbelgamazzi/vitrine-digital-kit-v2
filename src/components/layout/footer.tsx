@@ -46,6 +46,12 @@ export function Footer() {
           >
             WhatsApp: {siteConfig.whatsapp.display}
           </TrackedLink>
+          <a
+            href={`mailto:${siteConfig.email}`}
+            className="text-sm text-brand-white/70 transition-colors hover:text-brand-white"
+          >
+            {siteConfig.email}
+          </a>
         </div>
       </Container>
 
