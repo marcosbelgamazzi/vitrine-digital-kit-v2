@@ -82,18 +82,21 @@ documentado até que a informação real seja fornecida.
   empresas (Tupperware, sinalização digital, outras agências); domínio
   muito novo, sem autoridade/backlinks acumulados. Isso é esperado e
   não é um problema técnico — melhora com tempo, conteúdo e links.
-- **Meta Pixel — bloqueado**: portfólio empresarial Meta Business "Vitrine
-  Digital" (ID `4442878092595392`) criado, mas a Meta aplicou uma restrição
-  automática de segurança à conta ("Sua empresa está proibida de anunciar
-  ou criar pixels" — suspeita de automação), impedindo a criação do Pixel.
-  Solicitada revisão ("Pedir análise") no painel da Meta; resultado
-  pendente. Rechecado em 27/07/2026: restrição continua ativa ("Você não
-  pode usar este portfólio empresarial para anunciar"); o botão "Ver
-  detalhes" trava carregando indefinidamente no painel, sem exibir prazo
-  ou status da análise. Não há ação adicional possível do nosso lado —
-  depende só da revisão manual da Meta. Retomar a criação do Pixel nesse
-  mesmo portfólio assim que a restrição for removida — não criar um
-  portfólio novo.
+- **Meta Pixel — bloqueado (em análise)**: portfólio empresarial Meta
+  Business "Vitrine Digital" (ID `4442878092595392`) criado, mas a Meta
+  aplicou uma restrição automática de segurança à conta ("Sua empresa está
+  proibida de anunciar ou criar pixels" — suspeita de automação),
+  impedindo a criação do Pixel. Rechecado em 27/07/2026: restrição
+  continuava ativa. Rechecado novamente em 05/08/2026: restrição segue
+  ativa, mas o botão "Pedir análise" (em
+  `business-support-home/4442878092595392`) estava disponível — a
+  solicitação anterior não tinha sido de fato registrada pela Meta. Nova
+  solicitação de revisão enviada com sucesso em 05/08/2026 (após
+  verificação humana via reCAPTCHA, feita pelo usuário). Status agora:
+  "Em análise", com previsão da própria Meta de resposta em até 4 dias.
+  Não há ação adicional possível do nosso lado — depende só da revisão
+  manual da Meta. Retomar a criação do Pixel nesse mesmo portfólio assim
+  que a restrição for removida — não criar um portfólio novo.
 
 ## Segurança
 

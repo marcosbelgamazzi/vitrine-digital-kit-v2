@@ -43,6 +43,7 @@ const originLabels: Record<string, string> = {
   solucoes: "Página de Soluções",
   portfolio: "Página de Portfólio",
   "como-trabalhamos": "Página Como Trabalhamos",
+  "meta-ads-regiao-central": "Anúncio Meta Ads",
 };
 
 export function getOriginLabel(origin?: string | null): string | undefined {
