@@ -27,12 +27,12 @@ const items = [
 
 export function Differentiators() {
   return (
-    <section className="relative isolate overflow-hidden bg-brand-navy py-24 text-brand-white sm:py-32">
+    <section className="relative isolate overflow-hidden bg-brand-navy py-14 text-brand-white sm:py-32">
       <div aria-hidden="true" className="pointer-events-none absolute inset-0 -z-10">
         <div className="absolute left-1/2 top-1/3 h-[28rem] w-[44rem] -translate-x-1/2 rounded-full bg-brand-violet/15 blur-[140px]" />
         <div className="bg-grid absolute inset-0" />
       </div>
-      <Container className="flex flex-col gap-20">
+      <Container className="flex flex-col gap-12 sm:gap-20">
         <div className="flex flex-col gap-6">
           <span className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-brand-coral">
             <span className="h-1.5 w-1.5 rounded-full bg-brand-coral" aria-hidden="true" />

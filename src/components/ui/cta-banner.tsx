@@ -23,7 +23,7 @@ export function CtaBanner({
     : buttonHref;
 
   return (
-    <section className="bg-brand-white px-4 py-16 sm:px-6 sm:py-24">
+    <section className="bg-brand-white px-4 py-10 sm:px-6 sm:py-24">
       <div className="relative isolate mx-auto max-w-6xl overflow-hidden rounded-[2rem] bg-brand-navy px-6 py-16 text-brand-white shadow-2xl shadow-brand-violet/20 sm:px-12 sm:py-24">
         <div aria-hidden="true" className="pointer-events-none absolute inset-0 -z-10">
           <div className="absolute -bottom-1/2 left-1/2 h-[120%] w-[90%] -translate-x-1/2 animate-aurora rounded-full bg-gradient-to-r from-brand-violet/50 via-brand-blue/40 to-brand-coral/25 blur-[100px]" />

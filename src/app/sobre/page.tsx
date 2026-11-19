@@ -42,7 +42,7 @@ export default function SobrePage() {
         description="A Vitrine Digital nasceu para ajudar pequenas e médias empresas, profissionais autônomos e empreendedores a terem uma presença digital que realmente gera resultado."
       />
 
-      <section className="py-16 sm:py-20">
+      <section className="py-12 sm:py-20">
         <Container className="flex flex-col gap-6">
           <p className="max-w-2xl text-brand-navy/80">
             Acreditamos que um bom site vai além da estética: ele precisa
@@ -53,7 +53,7 @@ export default function SobrePage() {
         </Container>
       </section>
 
-      <section className="bg-brand-white py-16 sm:py-20">
+      <section className="bg-brand-white py-12 sm:py-20">
         <Container className="grid gap-8 sm:grid-cols-3">
           {values.map((value, index) => (
             <Reveal key={value.title} delay={index * 60}>

@@ -29,7 +29,7 @@ const pairs = [
  */
 export function Problems() {
   return (
-    <section className="relative isolate overflow-hidden bg-white py-20 sm:py-28">
+    <section className="relative isolate overflow-hidden bg-white py-12 sm:py-28">
       <div aria-hidden="true" className="pointer-events-none absolute -right-40 bottom-0 -z-10 h-96 w-96 rounded-full bg-brand-violet/10 blur-[120px]" />
       <Container className="flex flex-col gap-14">
         <SectionHeading

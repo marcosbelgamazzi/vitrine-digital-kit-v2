@@ -20,7 +20,7 @@ const faqJsonLd = {
 
 export function FaqSection() {
   return (
-    <section className="bg-brand-white py-20 sm:py-28">
+    <section className="bg-brand-white py-12 sm:py-28">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}

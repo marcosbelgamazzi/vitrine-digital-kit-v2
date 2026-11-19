@@ -5,14 +5,14 @@ import { CaseShowcase } from "@/components/portfolio/case-showcase";
 
 export function PortfolioTeaser() {
   return (
-    <section className="relative isolate overflow-hidden bg-brand-navy py-20 text-brand-white sm:py-28">
+    <section className="relative isolate overflow-hidden bg-brand-navy py-12 text-brand-white sm:py-28">
       <div aria-hidden="true" className="pointer-events-none absolute inset-0 -z-10">
         <div className="absolute -left-40 top-1/4 h-[30rem] w-[30rem] rounded-full bg-brand-violet/20 blur-[140px]" />
         <div className="absolute -right-40 bottom-0 h-[30rem] w-[30rem] rounded-full bg-brand-blue/15 blur-[140px]" />
         <div className="bg-noise absolute inset-0" />
       </div>
 
-      <Container className="flex flex-col gap-16 sm:gap-24">
+      <Container className="flex flex-col gap-12 sm:gap-24">
         <div className="flex flex-col items-start justify-between gap-6 lg:flex-row lg:items-end">
           <SectionHeading
             tone="dark"

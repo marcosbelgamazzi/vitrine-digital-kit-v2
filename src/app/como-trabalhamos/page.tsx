@@ -21,7 +21,7 @@ export default function ComoTrabalhamosPage() {
         description="Cada projeto segue as mesmas etapas — com transparência sobre o que está acontecendo em cada uma delas."
       />
 
-      <section className="py-16 sm:py-20">
+      <section className="py-12 sm:py-20">
         <Container>
           <ol className="flex flex-col gap-10">
             {processSteps.map((step, index) => (

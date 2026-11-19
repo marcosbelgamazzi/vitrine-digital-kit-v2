@@ -181,3 +181,11 @@
 - Faixa de capacidades e comparativo "sem estratégia × com a Vitrine" em
   fundo claro; mockups de celular com proporção ajustada às capturas.
 - Pendência registrada: fotos reais (responsável, clientes, depoimento).
+
+## Espaços no celular (2026-11-19)
+
+- Espaçamento vertical das seções reduzido no celular (desktop inalterado)
+  em toda a Home e nas páginas internas.
+- `Reveal` passa a revelar o bloco assim que a borda dele se aproxima da
+  tela (antes esperava 15% do bloco aparecer), com animação mais curta.
+  Remove os "buracos" em branco ao rolar no celular.

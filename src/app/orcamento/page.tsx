@@ -25,7 +25,7 @@ export default async function OrcamentoPage({
         description="Responda algumas perguntas rápidas e receba um resumo pronto para conversar com a gente pelo WhatsApp."
       />
 
-      <section className="py-16 sm:py-20">
+      <section className="py-12 sm:py-20">
         <Container className="max-w-2xl">
           <BudgetForm origin={origem} />
         </Container>
