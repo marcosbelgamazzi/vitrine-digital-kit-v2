@@ -128,3 +128,37 @@
   de portfólio) permanecem documentados e pendentes em
   `docs/PENDENCIAS.md` — não bloqueiam o deploy, mas devem ser resolvidos
   para a experiência final estar completa.
+
+## Portfólio — LucreFree e ORVIAN (2026-11-19)
+
+- Novos cases reais em `src/lib/portfolio.ts`: LucreFree (plataforma SaaS)
+  e ORVIAN (controle financeiro na web e no Android, com a assistente OrvIA),
+  com capturas reais em `public/portfolio/`. Campo opcional `appUrl` para o
+  link da Google Play.
+
+## Remodelagem visual (2026-11-19)
+
+- Nova linguagem visual dentro do `BRAND-GUIDE.md` (paleta, Poppins, logo
+  oficial), sem novas dependências: aurora animada com as cores da marca,
+  grade técnica, textura sutil e utilitários em `globals.css`
+  (`text-gradient`, `bg-grid`, `bg-noise`, `spotlight-card`).
+- Header escuro em vidro que encolhe ao rolar, link ativo, barra de progresso
+  de leitura, link "Pular para o conteúdo" e menu mobile em tela cheia
+  (fecha com Esc).
+- Home: Hero com vitrine 3D (navegador + celular) alternando as capturas
+  reais dos projetos e reagindo ao mouse; faixa contínua de capacidades;
+  bento grid com medidor animado da performance real (valores centralizados
+  em `src/lib/performance.ts`); comparativo "sem estratégia × com a Vitrine
+  Digital"; serviços em lista editorial; seletor de objetivos em abas
+  acessíveis (setas do teclado); portfólio com mockups e inclinação 3D;
+  linha do tempo do processo que se preenche na rolagem; manifesto com
+  palavras reveladas na rolagem; FAQ com acordeão animado.
+- `PageHero`, `CtaBanner` (com botão magnético e WhatsApp), `Footer`,
+  `Button` (tamanhos `md`/`lg`, seta e brilho) e cartões de `/servicos` e
+  `/solucoes` atualizados. `/portfolio` passou a usar a mesma vitrine da Home
+  (`src/components/portfolio/case-showcase.tsx`).
+- Destaques curtos de cada case (`highlights`) movidos para os dados do
+  portfólio. `priority` de `next/image` trocado por `preload` (Next.js 16).
+- Todas as animações respeitam `prefers-reduced-motion`. Sem rolagem
+  horizontal em 320, 390, 768, 1024, 1280 e 1440px.
+- Validado: `npm run lint`, `tsc --noEmit` e `npm run build` sem erros.

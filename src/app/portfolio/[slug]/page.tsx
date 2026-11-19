@@ -58,7 +58,7 @@ export default async function CasePage({
                 fill
                 sizes="100vw"
                 className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
-                priority
+                preload
               />
             </div>
           )}

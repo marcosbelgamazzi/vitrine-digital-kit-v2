@@ -37,7 +37,7 @@ export function Logo({
         alt={siteConfig.name}
         width={175}
         height={40}
-        priority
+        preload
         className={sizeClasses[size]}
       />
     </Link>

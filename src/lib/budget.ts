@@ -39,6 +39,7 @@ const originLabels: Record<string, string> = {
   "header-mobile": "Menu do site (mobile)",
   "home-hero": "Início",
   "home-final-cta": "Início",
+  footer: "Rodapé do site",
   servicos: "Página de Serviços",
   solucoes: "Página de Soluções",
   portfolio: "Página de Portfólio",
@@ -50,5 +51,7 @@ export function getOriginLabel(origin?: string | null): string | undefined {
   if (!origin) return undefined;
   if (originLabels[origin]) return originLabels[origin];
   if (origin.startsWith("portfolio-")) return "Página de um case do Portfólio";
+  if (origin.startsWith("home-case-")) return "Início (case do Portfólio)";
+  if (origin.startsWith("home-solucao-")) return "Início (seletor de objetivos)";
   return undefined;
 }

@@ -2,6 +2,7 @@ import { Container } from "@/components/ui/container";
 import { PageHero } from "@/components/ui/page-hero";
 import { CtaBanner } from "@/components/ui/cta-banner";
 import { Reveal } from "@/components/ui/reveal";
+import { SpotlightGroup } from "@/components/ui/spotlight-group";
 import { solutions } from "@/lib/solutions";
 import { pageMetadata } from "@/lib/seo";
 
@@ -21,21 +22,25 @@ export default function SolucoesPage() {
         description="Organizamos nossa oferta pela necessidade do seu negócio — não apenas pelo tipo de serviço."
       />
 
-      <section className="py-16 sm:py-20">
-        <Container>
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      <section className="relative py-20 sm:py-28">
+        <div aria-hidden="true" className="bg-grid-light pointer-events-none absolute inset-0" />
+        <Container className="relative">
+          <SpotlightGroup className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {solutions.map((solution, index) => (
-              <Reveal key={solution.slug} delay={index * 60}>
-                <div className="flex h-full flex-col gap-3 rounded-2xl border border-brand-navy/10 p-6 transition-all duration-300 hover:-translate-y-1 hover:border-brand-violet/30 hover:shadow-lg hover:shadow-brand-violet/5">
-                  <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-gradient-to-br from-brand-violet/10 to-brand-blue/10 text-brand-violet">
+              <Reveal key={solution.slug} delay={index * 60} className="h-full">
+                <div className="spotlight-card group flex h-full flex-col gap-4 overflow-hidden rounded-3xl border border-brand-navy/10 bg-white p-7 transition-transform duration-500 hover:-translate-y-1">
+                  <span className="text-sm font-medium tabular-nums text-brand-navy/30">
+                    {String(index + 1).padStart(2, "0")}
+                  </span>
+                  <span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-brand-navy text-brand-white transition-all duration-500 group-hover:rotate-[-6deg] group-hover:bg-gradient-to-br group-hover:from-brand-violet group-hover:to-brand-blue">
                     <solution.icon className="h-5 w-5" aria-hidden="true" />
                   </span>
-                  <h2 className="font-semibold text-brand-navy">{solution.title}</h2>
-                  <p className="text-sm text-brand-navy/70">{solution.description}</p>
+                  <h2 className="text-xl font-semibold text-brand-navy">{solution.title}</h2>
+                  <p className="text-sm leading-relaxed text-brand-navy/65">{solution.description}</p>
                 </div>
               </Reveal>
             ))}
-          </div>
+          </SpotlightGroup>
         </Container>
       </section>
 

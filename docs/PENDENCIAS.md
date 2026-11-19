@@ -109,6 +109,16 @@ documentado até que a informação real seja fornecida.
   manual da Meta. Retomar a criação do Pixel nesse mesmo portfólio assim
   que a restrição for removida — não criar um portfólio novo.
 
+## Performance
+
+- **Remedir o Lighthouse após a remodelagem — pendente**: a Home exibe
+  Performance 88, LCP 1.3s e CLS 0 medidos em jul/2026 (valores e data em
+  `src/lib/performance.ts`). A remodelagem de 19/11/2026 adicionou
+  animações e imagens no Hero, então os números podem ter mudado. Medir
+  `https://vittrinedigital.com.br` em https://pagespeed.web.dev (aba
+  "Celular") e atualizar `src/lib/performance.ts` com os novos valores e a
+  data.
+
 ## Segurança
 
 - **Next.js atualizado (16.2.10 → 16.2.11)**: corrigida vulnerabilidade alta
