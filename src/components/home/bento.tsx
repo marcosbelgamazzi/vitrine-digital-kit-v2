@@ -60,15 +60,18 @@ export function Bento() {
                 <h3 className="text-2xl font-semibold leading-tight">
                   Performance não é promessa, é o que este site entrega
                 </h3>
-                <dl className="flex gap-8">
-                  <div>
-                    <dt className="text-xs text-brand-white/50">Carregamento (LCP)</dt>
-                    <dd className="text-2xl font-semibold">{lighthouse.lcp}</dd>
-                  </div>
-                  <div>
-                    <dt className="text-xs text-brand-white/50">Instabilidade (CLS)</dt>
-                    <dd className="text-2xl font-semibold">{lighthouse.cls}</dd>
-                  </div>
+                <dl className="grid grid-cols-2 gap-x-8 gap-y-3 sm:grid-cols-4">
+                  {[
+                    ["Carregamento (LCP)", lighthouse.lcp],
+                    ["Instabilidade (CLS)", lighthouse.cls],
+                    ["Acessibilidade", lighthouse.accessibility],
+                    ["SEO", lighthouse.seo],
+                  ].map(([label, value]) => (
+                    <div key={label}>
+                      <dt className="text-xs text-brand-white/50">{label}</dt>
+                      <dd className="text-2xl font-semibold">{value}</dd>
+                    </div>
+                  ))}
                 </dl>
                 <ul className="flex flex-wrap gap-2" aria-label="Tecnologias que usamos">
                   {stack.map((tech) => (
@@ -81,7 +84,7 @@ export function Bento() {
                   ))}
                 </ul>
                 <p className="text-xs text-brand-white/40">
-                  Medido no próprio vittrinedigital.com.br via Google Lighthouse (mobile) em{" "}
+                  Medido no próprio vittrinedigital.com.br via Google PageSpeed Insights (celular) em{" "}
                   {lighthouse.measuredAt}.
                 </p>
               </div>
