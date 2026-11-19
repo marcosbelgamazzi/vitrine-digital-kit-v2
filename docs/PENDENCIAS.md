@@ -34,6 +34,14 @@ documentado até que a informação real seja fornecida.
   preencher apenas quando os dados reais forem fornecidos. Novos cases devem
   ser adicionados ao mesmo array, sempre com projetos reais, nunca com
   clientes, depoimentos ou resultados fictícios.
+- **Fotos reais — pendente (fornecidas pelo usuário)**: o que mais dá
+  "cara de empresa" em sites institucionais é fotografia real de pessoas
+  (referência analisada em 19/11/2026: sicredi.com.br). O site hoje usa só
+  capturas de tela dos projetos. Não usar fotos de banco de imagem (dariam a
+  impressão de clientes/equipe que não existem). Quando houver: foto do
+  responsável trabalhando (para Hero/Sobre), fotos de reuniões ou entregas
+  com clientes reais (com autorização) e, se possível, um depoimento real
+  com nome e foto (ex.: Comissão da Festa do Padroeiro São Sebastião).
 - **Sobre/Contato**: não inventar anos de mercado, equipe, prêmios ou
   certificações. Usar apenas o que for fornecido.
 

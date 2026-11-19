@@ -29,15 +29,10 @@ const pairs = [
  */
 export function Problems() {
   return (
-    <section className="relative isolate overflow-hidden bg-brand-graphite py-20 text-brand-white sm:py-28">
-      <div aria-hidden="true" className="pointer-events-none absolute inset-0 -z-10">
-        <div className="absolute left-1/2 top-0 h-px w-2/3 -translate-x-1/2 bg-gradient-to-r from-transparent via-brand-violet/60 to-transparent" />
-        <div className="absolute -right-40 bottom-0 h-96 w-96 rounded-full bg-brand-blue/15 blur-[120px]" />
-        <div className="bg-noise absolute inset-0" />
-      </div>
+    <section className="relative isolate overflow-hidden bg-white py-20 sm:py-28">
+      <div aria-hidden="true" className="pointer-events-none absolute -right-40 bottom-0 -z-10 h-96 w-96 rounded-full bg-brand-violet/10 blur-[120px]" />
       <Container className="flex flex-col gap-14">
         <SectionHeading
-          tone="dark"
           center
           eyebrow="O problema — e a solução"
           title="Sem uma presença digital forte, oportunidades passam direto"
@@ -46,14 +41,14 @@ export function Problems() {
 
         <div className="grid gap-4 lg:grid-cols-2">
           <Reveal className="h-full">
-            <div className="flex h-full flex-col gap-5 rounded-3xl border border-brand-white/10 bg-brand-white/[0.03] p-7 sm:p-9">
-              <span className="text-xs font-semibold uppercase tracking-[0.18em] text-brand-white/40">
+            <div className="flex h-full flex-col gap-5 rounded-3xl border border-brand-navy/10 bg-brand-white p-7 sm:p-9">
+              <span className="text-xs font-semibold uppercase tracking-[0.18em] text-brand-navy/40">
                 Sem estratégia
               </span>
               <ul className="flex flex-col gap-4">
                 {pairs.map(({ problem }) => (
-                  <li key={problem} className="flex items-start gap-3 text-brand-white/60">
-                    <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-brand-coral/15 text-brand-coral">
+                  <li key={problem} className="flex items-start gap-3 text-brand-navy/60">
+                    <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-brand-coral/15 text-[#d63a5c]">
                       <X className="h-3.5 w-3.5" aria-hidden="true" />
                     </span>
                     {problem}
@@ -64,7 +59,7 @@ export function Problems() {
           </Reveal>
 
           <Reveal className="h-full" delay={120}>
-            <div className="relative flex h-full flex-col gap-5 overflow-hidden rounded-3xl border border-brand-violet/40 bg-gradient-to-br from-brand-violet/20 via-brand-navy to-brand-blue/15 p-7 shadow-[0_30px_80px_-30px_rgb(108_60_255/0.6)] sm:p-9">
+            <div className="relative flex h-full flex-col gap-5 overflow-hidden rounded-3xl border border-brand-violet/40 bg-brand-navy bg-gradient-to-br from-brand-violet/30 via-brand-navy to-brand-blue/20 p-7 text-brand-white shadow-[0_30px_80px_-30px_rgb(108_60_255/0.6)] sm:p-9">
               <span className="text-xs font-semibold uppercase tracking-[0.18em] text-brand-coral">
                 Com a Vitrine Digital
               </span>

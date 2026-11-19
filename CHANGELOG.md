@@ -169,3 +169,15 @@
   Acessibilidade 97, Boas práticas 100, SEO 100, LCP 1.1s, CLS 0. Valores
   atualizados em `src/lib/performance.ts`; o cartão de performance da Home
   passou a exibir também Acessibilidade e SEO.
+
+## Melhorias visuais inspiradas em referência (2026-11-19)
+
+- Análise de padrões do site do Sicredi (sem copiar marca, textos ou
+  imagens): atalhos rápidos, seção de aplicativo, mais áreas claras.
+- Novos atalhos sobrepostos ao Hero (`quick-actions.tsx`): orçamento,
+  WhatsApp, projetos e processo; em grade 2×2 no celular.
+- Nova seção "Também criamos aplicativos" (`app-showcase.tsx`) com o case
+  real do ORVIAN e link da Google Play.
+- Faixa de capacidades e comparativo "sem estratégia × com a Vitrine" em
+  fundo claro; mockups de celular com proporção ajustada às capturas.
+- Pendência registrada: fotos reais (responsável, clientes, depoimento).

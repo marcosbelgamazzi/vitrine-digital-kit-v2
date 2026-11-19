@@ -52,7 +52,7 @@ export function CaseShowcase({ origin = "home" }: { origin?: string }) {
                           reversed ? "-left-4" : "-right-4"
                         }`}
                       >
-                        <div className="relative aspect-[9/19] overflow-hidden rounded-[1rem]">
+                        <div className="relative aspect-[9/16] overflow-hidden rounded-[1rem]">
                           <Image src={mobile} alt="" fill sizes="140px" className="object-cover object-top" />
                         </div>
                       </div>
