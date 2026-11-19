@@ -114,7 +114,7 @@ export function HeroShowcase({ items }: { items: ShowcaseItem[] }) {
           aria-hidden="true"
           className="absolute -bottom-10 -right-3 w-[27%] min-w-[110px] rounded-[1.6rem] border border-brand-white/20 bg-brand-navy p-1.5 shadow-2xl shadow-brand-navy/60 sm:-right-8 lg:[transform:translateZ(80px)]"
         >
-          <div className="relative aspect-[9/19] overflow-hidden rounded-[1.25rem] bg-brand-graphite">
+          <div className="relative aspect-[9/16] overflow-hidden rounded-[1.25rem] bg-brand-graphite">
             {items.map((item, i) =>
               item.mobile ? (
                 <Image

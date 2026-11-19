@@ -23,7 +23,7 @@ export function CapabilitiesMarquee() {
   return (
     <section
       aria-label="O que já entregamos"
-      className="relative overflow-hidden border-y border-brand-white/10 bg-brand-navy py-6"
+      className="relative overflow-hidden py-8"
     >
       <ul className="sr-only">
         {capabilities.map((item) => (
@@ -38,7 +38,7 @@ export function CapabilitiesMarquee() {
           {loop.map((item, i) => (
             <span
               key={`${item}-${i}`}
-              className="flex items-center gap-10 whitespace-nowrap text-lg font-medium text-brand-white/50 transition-colors hover:text-brand-white sm:text-xl"
+              className="flex items-center gap-10 whitespace-nowrap text-lg font-medium text-brand-navy/40 transition-colors hover:text-brand-navy sm:text-xl"
             >
               {item}
               <svg viewBox="0 0 24 24" className="h-4 w-4 text-brand-violet" fill="currentColor">
