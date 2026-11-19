@@ -24,6 +24,14 @@ Este arquivo é lido automaticamente no início de cada sessão. Siga-o antes de
 - Pergunte ao usuário apenas quando a decisão for irreversível ou bloquear o progresso; caso contrário, tome a decisão mais razoável e siga.
 
 ## Modo de trabalho autônomo
-- Trabalhe do início ao fim sem pedir confirmação intermediária: implemente, teste, corrija, faça commit, abra PR e deixe o auto-merge concluir a publicação sozinho.
+- Trabalhe do início ao fim sem pedir confirmação intermediária: implemente, teste, corrija, faça commit, abra PR, faça o merge e confirme o deploy conforme a seção "Publicação".
 - Só pare e pergunte ao usuário se a decisão for irreversível e genuinamente ambígua (ex: apagar dados reais de produção, trocar domínio, excluir algo sem backup, mudar de provedor de hospedagem/e-mail).
 - Ao final de cada tarefa, entregue um resumo direto do que foi feito, testado e publicado — sem relatar o passo a passo do processo.
+
+## Publicação
+- Hospedagem: projeto Vercel `vitrine-digital-kit-v2` (conta Belgamazzi Apps), que recebe o domínio `vittrinedigital.com.br`. O projeto antigo da Vercel (`vitrine-digital-ro`, outra conta) não recebe mais o domínio e não deve ser usado.
+- A `main` tem um ruleset que bloqueia commits diretos e exige o check "Vercel". Toda mudança vai por PR.
+- Fluxo de cada tarefa: crie uma branch, faça as mudanças, rode `npm run lint`, `npx tsc --noEmit` e `npm run build`, abra o PR, faça o merge e confirme o deploy.
+- Merge (sem pedir ao usuário): tente `gh pr merge --auto --squash`. Se o GitHub recusar porque o PR já está limpo (checks passados), rode `gh pr merge --squash --delete-branch` direto.
+- Confirmação do deploy: depois do merge, espere o check "Vercel" do commit na `main` ficar verde e teste `https://vittrinedigital.com.br` — `/`, `/servicos`, `/solucoes`, `/portfolio` e `/sitemap.xml` devem responder 200.
+- Não altere DNS, domínios, variáveis de ambiente nem configurações da Vercel ou do GitHub; se algo assim for necessário, registre em `docs/PENDENCIAS.md` e avise o usuário.

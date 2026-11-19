@@ -39,13 +39,21 @@ documentado até que a informação real seja fornecida.
 
 ## Integrações
 
-- **Domínio de produção — resolvido**: domínio oficial
-  `vittrinedigital.com.br` (e `www.`) vinculado ao projeto Vercel
-  (`vitrine-digital-ro`), DNS configurado no Registro.br (registro `A`
-  para `76.76.21.21`) e propagado. `NEXT_PUBLIC_SITE_URL` definido em
-  produção como `https://vittrinedigital.com.br`, usado em `metadataBase`,
-  `sitemap.ts` e `robots.ts`. HTTPS provisionado automaticamente pela
-  Vercel.
+- **Domínio de produção**: domínio oficial `vittrinedigital.com.br` (e
+  `www.`, que redireciona com 308) agora vinculado ao projeto Vercel
+  `vitrine-digital-kit-v2` (conta Belgamazzi Apps). O projeto antigo
+  (`vitrine-digital-ro`, outra conta) não recebe mais o domínio e não deve
+  ser usado. DNS no Registro.br (registro `A` para `76.76.21.21`, também em
+  `www`) conferido em 19/11/2026. HTTPS provisionado pela Vercel. Fluxo de
+  publicação documentado em `CLAUDE.md` (seção "Publicação").
+- **Variáveis de ambiente no projeto Vercel novo — pendente**: em
+  19/11/2026 o site publicado gera `robots.txt` e `sitemap.xml` com
+  `http://localhost:3000` (valor padrão de `siteUrl` em
+  `src/config/site.ts`), o que indica que `NEXT_PUBLIC_SITE_URL` não está
+  definido em produção no projeto `vitrine-digital-kit-v2`. Definir
+  `NEXT_PUBLIC_SITE_URL=https://vittrinedigital.com.br` (ambiente
+  Production) e fazer um novo deploy. Afeta `metadataBase`, `sitemap.ts` e
+  `robots.ts`.
 - **E-mail corporativo (Zoho Mail) — resolvido**: domínio
   `vittrinedigital.com.br` liberado pelo suporte Zoho da organização antiga
   e adicionado com sucesso à conta atual (`Vittrine Digital`). Domínio
@@ -64,14 +72,17 @@ documentado até que a informação real seja fornecida.
   Superadmin) e adicionado a `siteConfig.email` em `src/config/site.ts` —
   exibido com link `mailto:` no rodapé (`src/components/layout/footer.tsx`)
   e na página `/contato` (`src/app/contato/page.tsx`), ao lado do WhatsApp.
-- **Analytics — GA4 e GTM configurados**: propriedade GA4 "Vitrine Digital"
-  criada, ID de medição `G-XKMCXFV8ZS` definido em `NEXT_PUBLIC_GA_ID`
-  (produção, Vercel) e confirmado ativo em `https://vittrinedigital.com.br`.
-  Container GTM "Vitrine Digital" criado, ID `GTM-P2HCVHQZ` definido em
-  `NEXT_PUBLIC_GTM_ID` e confirmado ativo. Os eventos (`whatsapp_click`,
-  `budget_start`, `budget_complete`, `portfolio_view`, `service_view`,
-  `contact_submit`, `cta_click`) via `src/lib/analytics.ts` já estão sendo
-  enviados ao GA4.
+- **Analytics — GA4 e GTM (pendente no projeto novo)**: propriedade GA4
+  "Vitrine Digital" (ID de medição `G-XKMCXFV8ZS`) e container GTM
+  "Vitrine Digital" (ID `GTM-P2HCVHQZ`) criados e confirmados ativos quando
+  o domínio estava no projeto antigo. Em 19/11/2026 nenhum dos dois IDs
+  aparece no HTML de `https://vittrinedigital.com.br`, o que indica que
+  `NEXT_PUBLIC_GA_ID` e `NEXT_PUBLIC_GTM_ID` não estão definidos em
+  produção no projeto `vitrine-digital-kit-v2`. Definir as duas variáveis
+  (ambiente Production) e fazer um novo deploy. Até lá os eventos
+  (`whatsapp_click`, `budget_start`, `budget_complete`, `portfolio_view`,
+  `service_view`, `contact_submit`, `cta_click`) de `src/lib/analytics.ts`
+  não chegam ao GA4.
 - **Google Search Console — configurado (27/07/2026)**: propriedade
   `https://vittrinedigital.com.br/` verificada via meta tag
   (`verification.google` em `src/app/layout.tsx`), sitemap
