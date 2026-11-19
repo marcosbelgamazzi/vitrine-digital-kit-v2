@@ -140,15 +140,29 @@ export default async function CasePage({
             </div>
           )}
 
-          {item.url && (
-            <a
-              href={item.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-sm font-medium text-brand-violet underline underline-offset-4"
-            >
-              Visitar projeto
-            </a>
+          {(item.url || item.appUrl) && (
+            <div className="flex flex-wrap gap-x-6 gap-y-2">
+              {item.url && (
+                <a
+                  href={item.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm font-medium text-brand-violet underline underline-offset-4"
+                >
+                  Visitar projeto
+                </a>
+              )}
+              {item.appUrl && (
+                <a
+                  href={item.appUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm font-medium text-brand-violet underline underline-offset-4"
+                >
+                  Baixar o app (Google Play)
+                </a>
+              )}
+            </div>
           )}
         </Container>
       </section>

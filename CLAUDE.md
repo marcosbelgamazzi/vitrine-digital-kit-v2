@@ -27,6 +27,7 @@ Este arquivo é lido automaticamente no início de cada sessão. Siga-o antes de
 - Trabalhe do início ao fim sem pedir confirmação intermediária: implemente, teste, corrija, faça commit, abra PR, faça o merge e confirme o deploy conforme a seção "Publicação".
 - Só pare e pergunte ao usuário se a decisão for irreversível e genuinamente ambígua (ex: apagar dados reais de produção, trocar domínio, excluir algo sem backup, mudar de provedor de hospedagem/e-mail).
 - Ao final de cada tarefa, entregue um resumo direto do que foi feito, testado e publicado — sem relatar o passo a passo do processo.
+- Faça tudo o que estiver ao seu alcance sem esperar o usuário. O que só o usuário pode fazer (acessos, contas, painéis externos, variáveis de ambiente, DNS, decisões de negócio) não interrompe o trabalho: registre em `docs/PENDENCIAS.md` e entregue, ao final, uma lista única de pendências do usuário, com o passo a passo para concluí-las junto com ele.
 
 ## Publicação
 - Hospedagem: projeto Vercel `vitrine-digital-kit-v2` (conta Belgamazzi Apps), que recebe o domínio `vittrinedigital.com.br`. O projeto antigo da Vercel (`vitrine-digital-ro`, outra conta) não recebe mais o domínio e não deve ser usado.
