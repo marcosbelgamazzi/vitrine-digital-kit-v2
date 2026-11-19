@@ -162,3 +162,10 @@
 - Todas as animações respeitam `prefers-reduced-motion`. Sem rolagem
   horizontal em 320, 390, 768, 1024, 1280 e 1440px.
 - Validado: `npm run lint`, `tsc --noEmit` e `npm run build` sem erros.
+
+## Performance remedida (2026-11-19)
+
+- PageSpeed Insights (celular) após a remodelagem: Performance 97 (antes 88),
+  Acessibilidade 97, Boas práticas 100, SEO 100, LCP 1.1s, CLS 0. Valores
+  atualizados em `src/lib/performance.ts`; o cartão de performance da Home
+  passou a exibir também Acessibilidade e SEO.

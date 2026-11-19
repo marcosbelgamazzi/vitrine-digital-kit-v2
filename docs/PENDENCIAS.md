@@ -104,13 +104,11 @@ documentado até que a informação real seja fornecida.
 
 ## Performance
 
-- **Remedir o Lighthouse após a remodelagem — pendente**: a Home exibe
-  Performance 88, LCP 1.3s e CLS 0 medidos em jul/2026 (valores e data em
-  `src/lib/performance.ts`). A remodelagem de 19/11/2026 adicionou
-  animações e imagens no Hero, então os números podem ter mudado. Medir
-  `https://vittrinedigital.com.br` em https://pagespeed.web.dev (aba
-  "Celular") e atualizar `src/lib/performance.ts` com os novos valores e a
-  data.
+- **Lighthouse remedido após a remodelagem — resolvido**: medição de
+  19/11/2026 no PageSpeed Insights (celular): Performance 97, Acessibilidade
+  97, Boas práticas 100, SEO 100, LCP 1.1s, CLS 0, TBT 20 ms (desktop:
+  Performance 98). Valores atualizados em `src/lib/performance.ts` e
+  exibidos na Home.
 
 ## Segurança
 
