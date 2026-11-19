@@ -14,8 +14,12 @@ export function WhatsAppButton() {
       aria-label="Falar no WhatsApp"
       className="fixed bottom-4 right-4 z-50 flex h-12 w-12 items-center justify-center rounded-full bg-[#25D366] text-white shadow-lg transition-transform hover:scale-105 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-blue sm:bottom-5 sm:right-5 sm:h-14 sm:w-14"
     >
+      <span
+        aria-hidden="true"
+        className="absolute inset-0 animate-pulse-ring rounded-full bg-[#25D366]"
+      />
       <svg
-        className="h-6 w-6 sm:h-7 sm:w-7"
+        className="relative h-6 w-6 sm:h-7 sm:w-7"
         viewBox="0 0 24 24"
         fill="currentColor"
         aria-hidden="true"

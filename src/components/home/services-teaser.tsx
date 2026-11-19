@@ -1,3 +1,5 @@
+import Link from "next/link";
+import { ArrowUpRight } from "lucide-react";
 import { Container } from "@/components/ui/container";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { Button } from "@/components/ui/button";
@@ -17,31 +19,54 @@ export function ServicesTeaser() {
     .filter((service): service is (typeof services)[number] => Boolean(service));
 
   return (
-    <section className="py-16 sm:py-20">
-      <Container className="flex flex-col gap-10">
-        <div className="flex flex-col items-start justify-between gap-6 sm:flex-row sm:items-end">
+    <section className="bg-white py-20 sm:py-28">
+      <Container className="grid gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20">
+        <div className="flex flex-col items-start gap-8 lg:sticky lg:top-32 lg:self-start">
           <SectionHeading
             eyebrow="Serviços"
             title="O que entregamos"
-            description="Sites e sistemas prontos para o seu negócio. Catálogo completo com mais opções em /servicos."
+            description="Sites e sistemas prontos para o seu negócio. Do primeiro site a plataformas completas."
           />
-          <Button href="/servicos" variant="secondary" className="shrink-0">
+          <Button href="/servicos" variant="secondary" arrow>
             Ver todos os serviços
           </Button>
         </div>
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+
+        <ol className="flex flex-col border-t border-brand-navy/10">
           {featured.map((service, index) => (
-            <Reveal key={service.slug} delay={index * 60}>
-              <div className="flex h-full flex-col gap-3 rounded-2xl border border-brand-navy/10 p-6 transition-all duration-300 hover:-translate-y-1 hover:border-brand-violet/30 hover:shadow-lg hover:shadow-brand-violet/5">
-                <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-gradient-to-br from-brand-violet/10 to-brand-blue/10 text-brand-violet">
-                  <service.icon className="h-5 w-5" aria-hidden="true" />
-                </span>
-                <h3 className="font-semibold text-brand-navy">{service.title}</h3>
-                <p className="text-sm text-brand-navy/70">{service.description}</p>
-              </div>
-            </Reveal>
+            <li key={service.slug}>
+              <Reveal delay={index * 70}>
+                <Link
+                  href="/servicos"
+                  className="group relative flex items-start gap-5 overflow-hidden border-b border-brand-navy/10 px-2 py-8 transition-colors sm:gap-8 sm:px-4"
+                >
+                  <span
+                    aria-hidden="true"
+                    className="absolute inset-0 -z-0 origin-left scale-x-0 bg-gradient-to-r from-brand-violet/[0.07] to-brand-blue/[0.04] transition-transform duration-500 ease-out group-hover:scale-x-100"
+                  />
+                  <span className="relative pt-1 text-sm font-medium tabular-nums text-brand-navy/40">
+                    {String(index + 1).padStart(2, "0")}
+                  </span>
+                  <span className="relative flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-brand-navy text-brand-white transition-all duration-500 group-hover:rotate-[-6deg] group-hover:bg-gradient-to-br group-hover:from-brand-violet group-hover:to-brand-blue">
+                    <service.icon className="h-5 w-5" aria-hidden="true" />
+                  </span>
+                  <span className="relative flex flex-1 flex-col gap-1.5">
+                    <span className="text-xl font-semibold text-brand-navy sm:text-2xl">
+                      {service.title}
+                    </span>
+                    <span className="text-sm leading-relaxed text-brand-navy/65 sm:text-base">
+                      {service.description}
+                    </span>
+                  </span>
+                  <ArrowUpRight
+                    aria-hidden="true"
+                    className="relative mt-1 h-6 w-6 shrink-0 text-brand-navy/30 transition-all duration-300 group-hover:-translate-y-1 group-hover:translate-x-1 group-hover:text-brand-violet"
+                  />
+                </Link>
+              </Reveal>
+            </li>
           ))}
-        </div>
+        </ol>
       </Container>
     </section>
   );

@@ -8,6 +8,8 @@ export type CaseStudy = {
   gallery: string[];
   challenge: string;
   solution: string;
+  /** Destaques curtos (selos), resumidos das funcionalidades reais. */
+  highlights: string[];
   features: string[];
   technologies: string[];
   results: string[];
@@ -43,6 +45,7 @@ export const caseStudies: CaseStudy[] = [
       "Centralizar em um único canal toda a operação de um evento paroquial de grande porte: divulgação, venda antecipada de cartelas e churrasco, controle de pedidos dos compradores e gestão administrativa — que antes dependia de canais fragmentados.",
     solution:
       "Plataforma multipágina com áreas protegidas por login para clientes e para a organização, catálogo de produtos com checkout individual (nome, CPF, quantidade e horário de retirada) e geração de PIX, além de contagem regressiva, programação, enquete e captação para o grupo VIP no WhatsApp. Totalmente responsivo: no celular o menu colapsa em hambúrguer, os cards se reorganizam em coluna única e o checkout mantém todos os campos funcionais, sem perda de funcionalidade em relação ao desktop.",
+    highlights: ["Checkout com PIX", "Central do cliente", "Painel administrativo", "Cartelas de bingo"],
     features: [
       "Checkout por produto com geração de PIX",
       "Central do cliente (login por CPF + WhatsApp) para consultar pedidos, pagamentos e QR Code",
@@ -77,6 +80,7 @@ export const caseStudies: CaseStudy[] = [
       "Pequenos vendedores, prestadores de serviço e afiliados perdem tempo mandando foto e preço de cada produto, um por um, e espalham links soltos na bio. Faltava uma forma simples e gratuita de reunir tudo em um único endereço que já leve o cliente ao WhatsApp.",
     solution:
       "Uma plataforma SaaS com duas ferramentas na mesma conta — vitrine de produtos e página de links — em que o usuário escolhe o endereço, monta a página vendo tudo ao vivo, personaliza cores e layout e acompanha visitas e cliques. O botão \"Tenho interesse\" abre o WhatsApp com o nome do produto já na mensagem.",
+    highlights: ["Vitrine com WhatsApp", "Link na bio", "Estatísticas", "QR Code"],
     features: [
       "Vitrine de produtos com foto, preço e botão \"Tenho interesse\" no WhatsApp",
       "Página de links (link na bio) com destaques, seções e agendamento de links",
@@ -109,6 +113,7 @@ export const caseStudies: CaseStudy[] = [
       "Dinheiro espalhado entre contas, cartões e planilhas cansa, e números soltos não explicam nada. O desafio era reunir tudo em um painel único e ajudar a pessoa a entender o que mudou e o que merece atenção, sem expor dados financeiros sensíveis.",
     solution:
       "Plataforma web e aplicativo Android com a mesma conta, painel calculado pelo servidor, importação de extratos e faturas, Espaço Família com convites e permissões separado das finanças pessoais, e uma assistente com IA que só responde com base nos dados do usuário e nunca grava nada sem confirmação. Senhas guardadas apenas como hash argon2, sessões curtas com tokens rotativos e dados isolados por espaço.",
+    highlights: ["App Android", "Assistente com IA", "Espaço Família", "Importação de extratos"],
     features: [
       "Receitas e despesas com categorias, busca e filtros por período",
       "Contas e cartões com faturas, limites e compras parceladas",
