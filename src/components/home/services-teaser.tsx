@@ -19,7 +19,7 @@ export function ServicesTeaser() {
     .filter((service): service is (typeof services)[number] => Boolean(service));
 
   return (
-    <section className="bg-white py-20 sm:py-28">
+    <section className="bg-white py-12 sm:py-28">
       <Container className="grid gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20">
         <div className="flex flex-col items-start gap-8 lg:sticky lg:top-32 lg:self-start">
           <SectionHeading

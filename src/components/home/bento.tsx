@@ -37,9 +37,9 @@ function TileTitle({
  */
 export function Bento() {
   return (
-    <section className="relative bg-brand-white py-20 sm:py-28">
+    <section className="relative bg-brand-white py-12 sm:py-28">
       <div aria-hidden="true" className="bg-grid-light pointer-events-none absolute inset-0" />
-      <Container className="relative flex flex-col gap-12">
+      <Container className="relative flex flex-col gap-8 sm:gap-12">
         <SectionHeading
           center
           eyebrow="Por que a Vitrine Digital"

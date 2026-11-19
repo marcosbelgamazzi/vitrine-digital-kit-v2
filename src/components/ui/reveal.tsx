@@ -19,26 +19,32 @@ export function Reveal({
     const node = ref.current;
     if (!node) return;
 
+    let timeout = 0;
+    // Revela assim que a borda superior do bloco entra na tela (sem esperar
+    // uma porcentagem dele aparecer). Isso evita "buracos" em branco ao rolar
+    // no celular, onde os blocos são altos.
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          const timeout = setTimeout(() => setVisible(true), delay);
+          timeout = window.setTimeout(() => setVisible(true), Math.min(delay, 120));
           observer.disconnect();
-          return () => clearTimeout(timeout);
         }
       },
-      { threshold: 0.15, rootMargin: "0px 0px -40px 0px" }
+      { threshold: 0, rootMargin: "0px 0px 10% 0px" }
     );
 
     observer.observe(node);
-    return () => observer.disconnect();
+    return () => {
+      observer.disconnect();
+      window.clearTimeout(timeout);
+    };
   }, [delay]);
 
   return (
     <div
       ref={ref}
-      className={`transition-all duration-700 ease-out ${
-        visible ? "translate-y-0 opacity-100" : "translate-y-6 opacity-0"
+      className={`transition-all duration-500 ease-out ${
+        visible ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"
       } ${className}`}
     >
       {children}

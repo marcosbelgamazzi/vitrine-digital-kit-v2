@@ -26,7 +26,7 @@ export default function PortfolioPage() {
           <div className="absolute -left-40 top-1/4 h-[30rem] w-[30rem] rounded-full bg-brand-violet/20 blur-[140px]" />
           <div className="absolute -right-40 bottom-1/4 h-[30rem] w-[30rem] rounded-full bg-brand-blue/15 blur-[140px]" />
         </div>
-        <Container className="flex flex-col gap-24 sm:gap-32">
+        <Container className="flex flex-col gap-14 sm:gap-32">
           <CaseShowcase origin="portfolio" />
         </Container>
       </section>

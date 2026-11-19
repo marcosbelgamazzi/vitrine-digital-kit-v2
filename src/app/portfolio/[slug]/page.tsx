@@ -48,8 +48,8 @@ export default async function CasePage({
       <ViewTracker event="portfolio_view" eventParams={{ slug: item.slug }} />
       <PageHero eyebrow={item.category} title={item.name} description={item.summary} />
 
-      <section className="py-16 sm:py-20">
-        <Container className="flex flex-col gap-12">
+      <section className="py-12 sm:py-20">
+        <Container className="flex flex-col gap-8 sm:gap-12">
           {item.cover && (
             <div className="group relative aspect-video overflow-hidden rounded-2xl border border-brand-navy/10">
               <Image

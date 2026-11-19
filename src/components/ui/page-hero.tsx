@@ -22,7 +22,7 @@ export function PageHero({
         <div className="bg-noise absolute inset-0" />
         <div className="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-brand-white/20 to-transparent" />
       </div>
-      <Container className="flex flex-col gap-5 py-20 sm:py-28">
+      <Container className="flex flex-col gap-5 py-12 sm:py-28">
         {eyebrow && (
           <span className="inline-flex w-fit items-center gap-2 rounded-full border border-brand-white/15 bg-brand-white/5 px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-brand-coral backdrop-blur">
             <span className="h-1.5 w-1.5 rounded-full bg-brand-coral" aria-hidden="true" />

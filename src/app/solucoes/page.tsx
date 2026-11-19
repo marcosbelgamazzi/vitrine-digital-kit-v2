@@ -22,7 +22,7 @@ export default function SolucoesPage() {
         description="Organizamos nossa oferta pela necessidade do seu negócio — não apenas pelo tipo de serviço."
       />
 
-      <section className="relative py-20 sm:py-28">
+      <section className="relative py-12 sm:py-28">
         <div aria-hidden="true" className="bg-grid-light pointer-events-none absolute inset-0" />
         <Container className="relative">
           <SpotlightGroup className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">

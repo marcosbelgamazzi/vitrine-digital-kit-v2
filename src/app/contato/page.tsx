@@ -25,7 +25,7 @@ export default function ContatoPage() {
         description="Fale diretamente com a gente pelo WhatsApp ou envie sua mensagem abaixo."
       />
 
-      <section className="py-16 sm:py-20">
+      <section className="py-12 sm:py-20">
         <Container className="grid gap-12 lg:grid-cols-2">
           <div className="flex flex-col gap-4">
             <div className="flex items-center gap-3">
@@ -71,7 +71,7 @@ export default function ContatoPage() {
         </Container>
       </section>
 
-      <section className="bg-brand-white py-16 sm:py-20">
+      <section className="bg-brand-white py-12 sm:py-20">
         <Container className="flex flex-col gap-10">
           <SectionHeading center eyebrow="Dúvidas frequentes" title="Perguntas frequentes" />
           <div className="mx-auto w-full max-w-2xl">

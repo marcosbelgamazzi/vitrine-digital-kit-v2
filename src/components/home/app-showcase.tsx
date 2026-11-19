@@ -21,9 +21,9 @@ export function AppShowcase() {
   const mobile = app.gallery.find((image) => image.endsWith("/mobile.png"));
 
   return (
-    <section className="relative overflow-hidden bg-white py-20 sm:py-28">
+    <section className="relative overflow-hidden bg-white py-12 sm:py-28">
       <div aria-hidden="true" className="pointer-events-none absolute -right-32 top-10 h-[28rem] w-[28rem] rounded-full bg-brand-blue/10 blur-[110px]" />
-      <Container className="relative grid items-center gap-16 lg:grid-cols-2">
+      <Container className="relative grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
         <Reveal className="order-2 lg:order-1">
           <div className="relative mx-auto flex max-w-md items-end justify-center gap-5" aria-hidden="true">
             <div className="absolute inset-x-6 bottom-6 top-16 -z-10 rounded-[2.5rem] bg-gradient-to-br from-brand-violet/15 via-brand-blue/10 to-transparent" />
