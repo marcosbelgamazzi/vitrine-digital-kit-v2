@@ -212,3 +212,9 @@
   real da Festa do Padroeiro montado na tela do notebook.
 - Orçamento: coluna lateral (desktop) com ilustração do formulário real no
   tablet e os 3 passos do processo.
+
+## Imagens em Como trabalhamos e Contato (2026-11-20)
+
+- Como trabalhamos: ilustração fixa ao lado das etapas, com a Home real no
+  notebook.
+- Contato: ilustração com a página de contato real no celular.

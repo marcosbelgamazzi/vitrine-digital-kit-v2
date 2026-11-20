@@ -46,6 +46,8 @@ documentado até que a informação real seja fornecida.
   `evento-festa-notebook.webp` (página Soluções, com o site real da Festa
   na tela) e `orcamento-tablet.webp` (página Orçamento, com a página real
   de orçamento no tablet), montadas do mesmo jeito em 20/11/2026.
+  `desenvolvimento-notebook.webp` (Como trabalhamos, Home do próprio site no
+  notebook) e `contato-celular.webp` (Contato, página de contato no celular).
   Recusadas: duas imagens com aparência de banco de imagens ou campanha
   publicitária de terceiros (direitos incertos / pessoas possivelmente reais).
 - **Fotos reais — pendente**: fotos reais do responsável e de entregas para

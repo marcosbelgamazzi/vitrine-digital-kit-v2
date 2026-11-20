@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Container } from "@/components/ui/container";
 import { PageHero } from "@/components/ui/page-hero";
 import { CtaBanner } from "@/components/ui/cta-banner";
@@ -22,7 +23,7 @@ export default function ComoTrabalhamosPage() {
       />
 
       <section className="py-12 sm:py-20">
-        <Container>
+        <Container className="grid gap-12 lg:grid-cols-[1fr_1fr] lg:gap-16">
           <ol className="flex flex-col gap-10">
             {processSteps.map((step, index) => (
               <Reveal key={step.title} delay={index * 60}>
@@ -41,6 +42,24 @@ export default function ComoTrabalhamosPage() {
               </Reveal>
             ))}
           </ol>
+          <div className="lg:sticky lg:top-28 lg:self-start">
+            <div className="relative">
+              <div
+                aria-hidden="true"
+                className="absolute inset-x-[4%] bottom-0 top-[14%] rounded-[2.5rem] bg-gradient-to-br from-brand-violet via-brand-blue to-brand-navy shadow-2xl shadow-brand-violet/25"
+              >
+                <div className="bg-grid absolute inset-0 rounded-[2.5rem]" />
+              </div>
+              <Image
+                src="/images/ilustracoes/desenvolvimento-notebook.webp"
+                alt="Ilustração de um desenvolvedor trabalhando no notebook, com o site da Vitrine Digital aberto na tela"
+                width={1200}
+                height={800}
+                sizes="(min-width: 1024px) 540px, 92vw"
+                className="relative w-full"
+              />
+            </div>
+          </div>
         </Container>
       </section>
 
