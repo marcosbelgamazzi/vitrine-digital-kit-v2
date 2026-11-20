@@ -48,8 +48,10 @@ documentado até que a informação real seja fornecida.
   de orçamento no tablet), montadas do mesmo jeito em 20/11/2026.
   `desenvolvimento-notebook.webp` (Como trabalhamos, Home do próprio site no
   notebook) e `contato-celular.webp` (Contato, página de contato no celular).
-  Recusadas: duas imagens com aparência de banco de imagens ou campanha
-  publicitária de terceiros (direitos incertos / pessoas possivelmente reais).
+  `loja-celular.webp` (Serviços, LucreFree real no celular da lojista).
+  Origem: todas as imagens ilustrativas foram geradas pelo usuário no
+  ChatGPT (confirmado em 20/11/2026). Não usada: imagem de homem mais velho
+  e moça no notebook, por lembrar campanha publicitária com pessoas reais.
 - **Fotos reais — pendente**: fotos reais do responsável e de entregas para
   clientes (com autorização) e um depoimento real com nome continuam sendo
   o próximo passo para dar credibilidade (referência analisada:

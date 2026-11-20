@@ -1,4 +1,6 @@
+import Image from "next/image";
 import { Container } from "@/components/ui/container";
+import { Button } from "@/components/ui/button";
 import { PageHero } from "@/components/ui/page-hero";
 import { CtaBanner } from "@/components/ui/cta-banner";
 import { Reveal } from "@/components/ui/reveal";
@@ -43,6 +45,41 @@ export default function ServicosPage() {
               </Reveal>
             ))}
           </SpotlightGroup>
+        </Container>
+      </section>
+
+      <section className="bg-white py-12 sm:py-24">
+        <Container className="grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
+          <Reveal>
+            <div className="relative overflow-hidden rounded-[2rem] shadow-2xl shadow-brand-navy/15">
+              <Image
+                src="/images/ilustracoes/loja-celular.webp"
+                alt="Ilustração de uma lojista mostrando no celular a plataforma LucreFree, desenvolvida pela Vitrine Digital"
+                width={848}
+                height={562}
+                sizes="(min-width: 1024px) 560px, 92vw"
+                className="w-full"
+              />
+            </div>
+          </Reveal>
+          <div className="flex flex-col items-start gap-5">
+            <span className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-brand-violet">
+              <span className="h-1.5 w-1.5 rounded-full bg-brand-violet" aria-hidden="true" />
+              Para pequenos negócios
+            </span>
+            <h2 className="text-3xl font-semibold leading-[1.1] tracking-tight text-brand-navy sm:text-4xl">
+              Do primeiro site a uma plataforma completa
+            </h2>
+            <p className="text-lg font-light leading-relaxed text-brand-navy/70">
+              Começamos pelo que o seu negócio precisa hoje e evoluímos junto com
+              ele. O LucreFree, por exemplo, é uma plataforma que criamos para
+              quem vende pelo Instagram e pelo WhatsApp mostrar seus produtos em
+              uma vitrine no celular.
+            </p>
+            <Button href="/portfolio/lucrefree" arrow>
+              Ver o case LucreFree
+            </Button>
+          </div>
         </Container>
       </section>
 

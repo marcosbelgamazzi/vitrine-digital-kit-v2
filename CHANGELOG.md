@@ -218,3 +218,8 @@
 - Como trabalhamos: ilustração fixa ao lado das etapas, com a Home real no
   notebook.
 - Contato: ilustração com a página de contato real no celular.
+
+## Imagem em Serviços (2026-11-20)
+
+- Serviços: bloco "Do primeiro site a uma plataforma completa" com
+  ilustração de lojista mostrando o LucreFree real no celular.
