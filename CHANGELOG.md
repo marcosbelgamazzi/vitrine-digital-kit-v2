@@ -197,3 +197,11 @@
   flutuantes (WhatsApp, Google).
 - Página Sobre: bloco "No que acreditamos" com ilustração de apresentação de
   projeto. Imagens otimizadas em WebP em `public/images/ilustracoes/`.
+
+## Imagem do LucreFree Descubra (2026-11-20)
+
+- Montagem com a captura real do LucreFree Descubra na tela de um notebook
+  (`public/portfolio/lucrefree/descubra-notebook.webp`), usada na coluna
+  "O que entregamos" da Home e na galeria do case LucreFree.
+- Case LucreFree: funcionalidade "Descubra" (vitrine pública de produtos de
+  vendedores aprovados) adicionada.
