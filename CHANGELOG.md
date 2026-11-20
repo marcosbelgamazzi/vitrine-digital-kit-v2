@@ -205,3 +205,10 @@
   "O que entregamos" da Home e na galeria do case LucreFree.
 - Case LucreFree: funcionalidade "Descubra" (vitrine pública de produtos de
   vendedores aprovados) adicionada.
+
+## Imagens em Soluções e Orçamento (2026-11-20)
+
+- Soluções: bloco "Caso real · Divulgar um evento" com ilustração e o site
+  real da Festa do Padroeiro montado na tela do notebook.
+- Orçamento: coluna lateral (desktop) com ilustração do formulário real no
+  tablet e os 3 passos do processo.

@@ -1,4 +1,6 @@
+import Image from "next/image";
 import { Container } from "@/components/ui/container";
+import { Button } from "@/components/ui/button";
 import { PageHero } from "@/components/ui/page-hero";
 import { CtaBanner } from "@/components/ui/cta-banner";
 import { Reveal } from "@/components/ui/reveal";
@@ -41,6 +43,47 @@ export default function SolucoesPage() {
               </Reveal>
             ))}
           </SpotlightGroup>
+        </Container>
+      </section>
+
+      <section className="bg-white py-12 sm:py-24">
+        <Container className="grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
+          <Reveal className="order-2 lg:order-1">
+            <div className="relative">
+              <div
+                aria-hidden="true"
+                className="absolute inset-x-[4%] bottom-[4%] top-[14%] rounded-[2.5rem] bg-gradient-to-br from-brand-violet via-brand-blue to-brand-navy shadow-2xl shadow-brand-violet/25"
+              >
+                <div className="bg-grid absolute inset-0 rounded-[2.5rem]" />
+              </div>
+              <Image
+                src="/images/ilustracoes/evento-festa-notebook.webp"
+                alt="Ilustração de duas pessoas organizando um evento, com o site real da Festa do Padroeiro São Sebastião aberto no notebook"
+                width={1200}
+                height={800}
+                sizes="(min-width: 1024px) 560px, 92vw"
+                className="relative w-full"
+              />
+            </div>
+          </Reveal>
+          <div className="order-1 flex flex-col items-start gap-5 lg:order-2">
+            <span className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-brand-violet">
+              <span className="h-1.5 w-1.5 rounded-full bg-brand-violet" aria-hidden="true" />
+              Caso real · Divulgar um evento
+            </span>
+            <h2 className="text-3xl font-semibold leading-[1.1] tracking-tight text-brand-navy sm:text-4xl">
+              Do objetivo à solução no ar
+            </h2>
+            <p className="text-lg font-light leading-relaxed text-brand-navy/70">
+              A 6ª Festa do Padroeiro São Sebastião precisava divulgar o evento e
+              vender cartelas e churrasco antecipado. A solução virou uma
+              plataforma completa, com checkout com PIX, área do cliente e painel
+              administrativo.
+            </p>
+            <Button href="/portfolio/festa-sao-sebastiao" arrow>
+              Ver o case completo
+            </Button>
+          </div>
         </Container>
       </section>
 
