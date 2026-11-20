@@ -39,8 +39,10 @@ documentado até que a informação real seja fornecida.
   celular que seus clientes vão encontrar você") e
   `apresentacao-projeto.webp` (página Sobre). São ilustrações do público e
   do serviço — nunca apresentá-las como clientes, equipe ou depoimentos.
-  Não usada: imagem de pessoa com loja virtual na tela (a Vitrine Digital
-  ainda não tem loja virtual no portfólio).
+  `public/portfolio/lucrefree/descubra-notebook.webp`: ilustração de pessoa
+  com notebook, com a captura real do LucreFree Descubra montada na tela em
+  perspectiva (Home, coluna "O que entregamos", e galeria do case LucreFree).
+  Ao atualizar o Descubra, gerar de novo a montagem com a tela atual.
 - **Fotos reais — pendente**: fotos reais do responsável e de entregas para
   clientes (com autorização) e um depoimento real com nome continuam sendo
   o próximo passo para dar credibilidade (referência analisada:

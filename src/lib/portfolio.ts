@@ -71,6 +71,7 @@ export const caseStudies: CaseStudy[] = [
       "O LucreFree é uma plataforma online para quem divulga e vende pelo Instagram, TikTok, Facebook e WhatsApp. Cada usuário cria sua conta e monta, sem programar, uma vitrine de produtos e/ou uma página de links (link na bio) com endereço próprio em lucrefree.com.br, pensada primeiro para o celular. O projeto inclui cadastro com e-mail ou Google, painel do usuário, planos, programa de indicação e uma área pública para descobrir produtos de pequenos vendedores.",
     cover: "/portfolio/lucrefree/cover.png",
     gallery: [
+      "/portfolio/lucrefree/descubra-notebook.webp",
       "/portfolio/lucrefree/mobile.png",
       "/portfolio/lucrefree/exemplo.png",
       "/portfolio/lucrefree/recursos.png",
@@ -89,6 +90,7 @@ export const caseStudies: CaseStudy[] = [
       "Estatísticas de visitas, cliques e produtos mais clicados",
       "Formulário de captação de contatos com exportação em planilha",
       "QR Code pronto para baixar e domínio próprio",
+      "Descubra: vitrine pública com produtos de vendedores aprovados, com filtros por categoria e compra no site de cada vendedor",
       "Cadastro com e-mail ou Google, planos e programa de indicação",
     ],
     technologies: [],

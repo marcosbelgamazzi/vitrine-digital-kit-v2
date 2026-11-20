@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import { Container } from "@/components/ui/container";
@@ -30,6 +31,24 @@ export function ServicesTeaser() {
           <Button href="/servicos" variant="secondary" arrow>
             Ver todos os serviços
           </Button>
+          <Link
+            href="/portfolio/lucrefree"
+            className="group mt-2 flex w-full flex-col gap-3 rounded-3xl focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand-blue"
+          >
+            <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-brand-violet/15 via-brand-blue/10 to-brand-white">
+              <Image
+                src="/portfolio/lucrefree/descubra-notebook.webp"
+                alt="Pessoa navegando no LucreFree Descubra, plataforma desenvolvida pela Vitrine Digital"
+                width={1200}
+                height={801}
+                sizes="(min-width: 1024px) 440px, 92vw"
+                className="w-full transition-transform duration-700 group-hover:scale-[1.03]"
+              />
+            </div>
+            <span className="text-sm text-brand-navy/60">
+              Projeto real: <span className="font-medium text-brand-navy underline decoration-brand-navy/20 underline-offset-4 group-hover:decoration-brand-violet">LucreFree Descubra</span>
+            </span>
+          </Link>
         </div>
 
         <ol className="flex flex-col border-t border-brand-navy/10">
