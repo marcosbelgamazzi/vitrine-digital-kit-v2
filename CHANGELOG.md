@@ -189,3 +189,11 @@
 - `Reveal` passa a revelar o bloco assim que a borda dele se aproxima da
   tela (antes esperava 15% do bloco aparecer), com animação mais curta.
   Remove os "buracos" em branco ao rolar no celular.
+
+## Imagens ilustrativas (2026-11-20)
+
+- Nova seção na Home "É pelo celular que seus clientes vão encontrar você"
+  (`mobile-audience.tsx`) com ilustração de pessoas usando o celular e selos
+  flutuantes (WhatsApp, Google).
+- Página Sobre: bloco "No que acreditamos" com ilustração de apresentação de
+  projeto. Imagens otimizadas em WebP em `public/images/ilustracoes/`.
