@@ -1,6 +1,7 @@
 import { Hero } from "@/components/home/hero";
 import { QuickActions } from "@/components/home/quick-actions";
 import { AppShowcase } from "@/components/home/app-showcase";
+import { MobileAudience } from "@/components/home/mobile-audience";
 import { CapabilitiesMarquee } from "@/components/home/capabilities-marquee";
 import { Bento } from "@/components/home/bento";
 import { Problems } from "@/components/home/problems";
@@ -18,6 +19,7 @@ export default function Home() {
       <Hero />
       <QuickActions />
       <CapabilitiesMarquee />
+      <MobileAudience />
       <Bento />
       <Problems />
       <ServicesTeaser />

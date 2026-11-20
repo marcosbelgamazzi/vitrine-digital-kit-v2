@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { MessageCircle, Ruler, ShieldCheck } from "lucide-react";
 import { Container } from "@/components/ui/container";
 import { PageHero } from "@/components/ui/page-hero";
@@ -42,14 +43,36 @@ export default function SobrePage() {
         description="A Vitrine Digital nasceu para ajudar pequenas e médias empresas, profissionais autônomos e empreendedores a terem uma presença digital que realmente gera resultado."
       />
 
-      <section className="py-12 sm:py-20">
-        <Container className="flex flex-col gap-6">
-          <p className="max-w-2xl text-brand-navy/80">
-            Acreditamos que um bom site vai além da estética: ele precisa
-            comunicar com clareza, carregar rápido, funcionar bem em qualquer
-            tela e ajudar o seu negócio a ser encontrado. É esse o padrão que
-            buscamos em cada projeto.
-          </p>
+      <section className="py-12 sm:py-24">
+        <Container className="grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
+          <div className="flex flex-col gap-5">
+            <span className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-brand-violet">
+              <span className="h-1.5 w-1.5 rounded-full bg-brand-violet" aria-hidden="true" />
+              No que acreditamos
+            </span>
+            <h2 className="text-3xl font-semibold leading-[1.1] tracking-tight text-brand-navy sm:text-4xl">
+              Clareza, velocidade e resultado
+            </h2>
+            <p className="text-lg font-light leading-relaxed text-brand-navy/70">Acreditamos que um bom site vai além da estética: ele precisa comunicar com clareza, carregar rápido, funcionar bem em qualquer tela e ajudar o seu negócio a ser encontrado. É esse o padrão que buscamos em cada projeto.</p>
+          </div>
+          <Reveal>
+            <div className="relative">
+              <div
+                aria-hidden="true"
+                className="absolute inset-x-[4%] bottom-0 top-[10%] rounded-[2.5rem] bg-gradient-to-br from-brand-violet via-brand-blue to-brand-navy shadow-2xl shadow-brand-violet/25"
+              >
+                <div className="bg-grid absolute inset-0 rounded-[2.5rem]" />
+              </div>
+              <Image
+                src="/images/ilustracoes/apresentacao-projeto.webp"
+                alt="Ilustração de um projeto sendo apresentado em um notebook para duas pessoas"
+                width={1200}
+                height={800}
+                sizes="(min-width: 1024px) 560px, 92vw"
+                className="relative w-full"
+              />
+            </div>
+          </Reveal>
         </Container>
       </section>
 

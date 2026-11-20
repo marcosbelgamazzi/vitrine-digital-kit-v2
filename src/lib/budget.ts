@@ -40,6 +40,8 @@ const originLabels: Record<string, string> = {
   "home-hero": "Início",
   "home-final-cta": "Início",
   footer: "Rodapé do site",
+  "home-celular": "Início (seção celular)",
+  "home-atalho": "Início (atalhos)",
   servicos: "Página de Serviços",
   solucoes: "Página de Soluções",
   portfolio: "Página de Portfólio",
