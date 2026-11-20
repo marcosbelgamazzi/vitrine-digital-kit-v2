@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Mail, MessageCircle } from "lucide-react";
 import { Container } from "@/components/ui/container";
 import { PageHero } from "@/components/ui/page-hero";
@@ -65,6 +66,25 @@ export default function ContatoPage() {
             >
               {siteConfig.email}
             </TrackedLink>
+
+            <div className="mt-8">
+              <div className="relative">
+              <div
+                aria-hidden="true"
+                className="absolute inset-x-[4%] bottom-0 top-[14%] rounded-[2.5rem] bg-gradient-to-br from-brand-violet via-brand-blue to-brand-navy shadow-2xl shadow-brand-violet/25"
+              >
+                <div className="bg-grid absolute inset-0 rounded-[2.5rem]" />
+              </div>
+              <Image
+                src="/images/ilustracoes/contato-celular.webp"
+                alt="Ilustração de uma mulher sorrindo enquanto acessa a página de contato da Vitrine Digital no celular"
+                width={1200}
+                height={800}
+                sizes="(min-width: 1024px) 540px, 92vw"
+                className="relative w-full"
+              />
+            </div>
+            </div>
           </div>
 
           <ContactForm />
